@@ -1,0 +1,49 @@
+# //  ModelSim SE-64 2020.1 Jan 28 2020 Linux 4.18.0-513.24.1.el8_9.x86_64
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do sim_window.do
+# -9
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vmap 2020.1 Lib Mapping Utility 2020.01 Jan 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 16:16:31 on Apr 15,2024
+# vlog -reportprogress 300 -work work ../../sv/conv/window.sv 
+# -- Compiling module window
+# 
+# Top level modules:
+# 	window
+# End time: 16:16:31 on Apr 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+# Start time: 16:16:31 on Apr 15,2024
+# vlog -reportprogress 300 -work work ../../sv/conv/window_tb.sv 
+# -- Compiling module window_tb
+# 
+# Top level modules:
+# 	window_tb
+# End time: 16:16:31 on Apr 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" "+notimingchecks" -L work work.window_tb -wlf window_tb.wlf 
+# Start time: 16:16:31 on Apr 15,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.window_tb(fast)
+# Loading work.window(fast)
+# ** Note: $finish    : ../../sv/conv/window_tb.sv(73)
+#    Time: 82100 ns  Iteration: 0  Instance: /window_tb
+# 1
+# Break in Module window_tb at ../../sv/conv/window_tb.sv line 73
+# End time: 16:17:02 on Apr 15,2024, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 0
