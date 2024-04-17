@@ -1,23 +1,22 @@
 #--  Synopsys, Inc.
 #--  Version O-2018.09-SP1
-#--  Project file /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/window.prj
-#--  Written on Wed Apr 17 12:43:05 2024
-
+#--  Project file /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/scratchproject.prs
 
 #project files
-add_file -verilog -vlog_std sysv "../sv/conv/window.sv"
-add_file -verilog -vlog_std sysv "../sv/conv/conv.sv"
+add_file -verilog -vlog_std sysv "/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv"
+add_file -verilog -vlog_std sysv "/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/conv.sv"
 
 
 
 #implementation: "rev_2"
-impl -add rev_2 -type fpga
+impl -add /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2 -type fpga
 
 #
 #implementation attributes
 
 set_option -vlog_std sysv
 set_option -project_relative_includes 1
+set_option -include_path {/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/}
 
 #par_1 attributes
 set_option -job par_1 -add par
@@ -71,7 +70,7 @@ set_option -auto_infer_blackbox 0
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "rev_2/window.vqm"
+project -result_file "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.vqm"
 
 #design plan options
 impl -active "rev_2"

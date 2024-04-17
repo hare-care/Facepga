@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version O-2018.09-SP1
-#--  Project file /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/window.prj
-#--  Written on Wed Apr 17 12:43:05 2024
+#--  Project file /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/run_options.txt
+#--  Written on Wed Apr 17 12:36:16 2024
 
 
 #project files
