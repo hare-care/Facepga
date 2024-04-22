@@ -11,17 +11,268 @@
 
 Starting:    /vol/synopsys/fpga/O-2018.09-SP1/linux_a_64/mbin/synplify
 Install:     /vol/synopsys/fpga/O-2018.09-SP1
-Hostname:    selina.ece.northwestern.edu
-Date:        Wed Apr 17 12:57:42 2024
+Hostname:    joker.ece.northwestern.edu
+Date:        Mon Apr 22 10:53:49 2024
 Version:     O-2018.09-SP1
 
 Arguments:   -product synplify_premier
 ProductType: synplify_premier
 
+License checkout: synplifypremierdp
+License: synplifypremierdp from server synopsyslm.ece.northwestern.edu (Using premium license)
+Licensed Vendor: All FPGA
+License Option: ident
 
-Host ID:  a4bb6d3edc7d
-Please contact support at https://solvnet.synopsys.com/ManageCase?ccf=1
 
 
+log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr"
+Running: rev_2 in foreground
 
+Running window|rev_2
 
+Running Flow: compile (Compile) on window|rev_2
+# Mon Apr 22 10:54:17 2024
+
+Running Flow: compile_flow (Compile Process) on window|rev_2
+# Mon Apr 22 10:54:17 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on window|rev_2
+# Mon Apr 22 10:54:17 2024
+compiler exited with errors
+Job failed on: window|rev_2
+
+Job: "compiler" terminated with error status: 2
+See log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synlog/window_compiler.srr"
+# Mon Apr 22 10:54:18 2024
+
+Return Code: 2
+Run Time:00h:00m:01s
+Complete: Compile Process on window|rev_2
+Complete: Compile on window|rev_2
+Complete: Logic Synthesis on window|rev_2
+2Opening object source file /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/mobilenet.sv
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/backup/window.srr
+log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr"
+Running: rev_2 in foreground
+
+Running window|rev_2
+
+Running Flow: compile (Compile) on window|rev_2
+# Mon Apr 22 10:54:51 2024
+
+Running Flow: compile_flow (Compile Process) on window|rev_2
+# Mon Apr 22 10:54:51 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on window|rev_2
+# Mon Apr 22 10:54:51 2024
+compiler exited with errors
+Job failed on: window|rev_2
+
+Job: "compiler" terminated with error status: 2
+See log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synlog/window_compiler.srr"
+# Mon Apr 22 10:54:51 2024
+
+Return Code: 2
+Run Time:00h:00m:00s
+Complete: Compile Process on window|rev_2
+Complete: Compile on window|rev_2
+Complete: Logic Synthesis on window|rev_2
+2Opening object source file /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr
+log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr"
+Running: rev_2 in foreground
+
+Running window|rev_2
+
+Running Flow: compile (Compile) on window|rev_2
+# Mon Apr 22 10:55:55 2024
+
+Running Flow: compile_flow (Compile Process) on window|rev_2
+# Mon Apr 22 10:55:55 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on window|rev_2
+# Mon Apr 22 10:55:55 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synwork/window_comp.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srs
+compiler exited with errors
+Job failed on: window|rev_2
+
+Job: "compiler" terminated with error status: 2
+See log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synlog/window_compiler.srr"
+# Mon Apr 22 10:55:58 2024
+
+Return Code: 2
+Run Time:00h:00m:03s
+Complete: Compile Process on window|rev_2
+Complete: Compile on window|rev_2
+Complete: Logic Synthesis on window|rev_2
+0Warning: File already exists in project: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/conv.sv"
+Warning: File already exists in project: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv"
+log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr"
+Running: rev_2 in foreground
+
+Running window|rev_2
+
+Running Flow: compile (Compile) on window|rev_2
+# Mon Apr 22 10:57:19 2024
+
+Running Flow: compile_flow (Compile Process) on window|rev_2
+# Mon Apr 22 10:57:19 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on window|rev_2
+# Mon Apr 22 10:57:19 2024
+compiler exited with errors
+Job failed on: window|rev_2
+
+Job: "compiler" terminated with error status: 2
+See log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synlog/window_compiler.srr"
+# Mon Apr 22 10:57:19 2024
+
+Return Code: 2
+Run Time:00h:00m:00s
+Complete: Compile Process on window|rev_2
+Complete: Compile on window|rev_2
+Complete: Logic Synthesis on window|rev_2
+2log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr"
+Running: rev_2 in foreground
+
+Running window|rev_2
+
+Running Flow: compile (Compile) on window|rev_2
+# Mon Apr 22 10:57:57 2024
+
+Running Flow: compile_flow (Compile Process) on window|rev_2
+# Mon Apr 22 10:57:57 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on window|rev_2
+# Mon Apr 22 10:57:57 2024
+compiler exited with errors
+Job failed on: window|rev_2
+
+Job: "compiler" terminated with error status: 2
+See log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synlog/window_compiler.srr"
+# Mon Apr 22 10:57:58 2024
+
+Return Code: 2
+Run Time:00h:00m:01s
+Complete: Compile Process on window|rev_2
+Complete: Compile on window|rev_2
+Complete: Logic Synthesis on window|rev_2
+2Opening object source file /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr
+log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr"
+Running: rev_2 in foreground
+
+Running window|rev_2
+
+Running Flow: compile (Compile) on window|rev_2
+# Mon Apr 22 10:58:25 2024
+
+Running Flow: compile_flow (Compile Process) on window|rev_2
+# Mon Apr 22 10:58:25 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on window|rev_2
+# Mon Apr 22 10:58:25 2024
+compiler exited with errors
+Job failed on: window|rev_2
+
+Job: "compiler" terminated with error status: 2
+See log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synlog/window_compiler.srr"
+# Mon Apr 22 10:58:25 2024
+
+Return Code: 2
+Run Time:00h:00m:00s
+Complete: Compile Process on window|rev_2
+Complete: Compile on window|rev_2
+Complete: Logic Synthesis on window|rev_2
+2Opening object source file /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr
+log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr"
+Running: rev_2 in foreground
+
+Running window|rev_2
+
+Running Flow: compile (Compile) on window|rev_2
+# Mon Apr 22 10:58:53 2024
+
+Running Flow: compile_flow (Compile Process) on window|rev_2
+# Mon Apr 22 10:58:53 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on window|rev_2
+# Mon Apr 22 10:58:53 2024
+compiler exited with errors
+Job failed on: window|rev_2
+
+Job: "compiler" terminated with error status: 2
+See log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synlog/window_compiler.srr"
+# Mon Apr 22 10:58:53 2024
+
+Return Code: 2
+Run Time:00h:00m:00s
+Complete: Compile Process on window|rev_2
+Complete: Compile on window|rev_2
+Complete: Logic Synthesis on window|rev_2
+2Opening object source file /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr
+log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srr"
+Running: rev_2 in foreground
+
+Running window|rev_2
+
+Running Flow: compile (Compile) on window|rev_2
+# Mon Apr 22 10:59:26 2024
+
+Running Flow: compile_flow (Compile Process) on window|rev_2
+# Mon Apr 22 10:59:26 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on window|rev_2
+# Mon Apr 22 10:59:26 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synwork/window_comp.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srs
+
+compiler completed
+# Mon Apr 22 10:59:29 2024
+
+Return Code: 0
+Run Time:00h:00m:03s
+
+Running: multi_srs_gen (Multi-srs Generator) on window|rev_2
+# Mon Apr 22 10:59:29 2024
+
+multi_srs_gen completed
+# Mon Apr 22 10:59:29 2024
+
+Return Code: 0
+Run Time:00h:00m:00s
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synwork/window_mult.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srs
+Complete: Compile Process on window|rev_2
+
+Running: premap (Premap) on window|rev_2
+# Mon Apr 22 10:59:29 2024
+
+premap completed with warnings
+# Mon Apr 22 10:59:30 2024
+
+Return Code: 1
+Run Time:00h:00m:01s
+Complete: Compile on window|rev_2
+
+Running Flow: map (Map) on window|rev_2
+# Mon Apr 22 10:59:30 2024
+License granted for 4 parallel jobs
+
+Running: fpga_mapper (Map & Optimize) on window|rev_2
+# Mon Apr 22 10:59:30 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synwork/window_m.srm to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/window.srm
+
+fpga_mapper completed with warnings
+# Mon Apr 22 10:59:31 2024
+
+Return Code: 1
+Run Time:00h:00m:01s
+Complete: Map on window|rev_2
+Complete: Logic Synthesis on window|rev_2
+0exit status=0
+License checkin: synplifypremierdp

@@ -1,0 +1,7 @@
+MobileNet.fc_inst work fc 0 1
+MobileNet.genblk1\[2\]\.cnn_inst.window_inst work window 0 1
+MobileNet.genblk1\[2\]\.cnn_inst work conv 0 1
+MobileNet.genblk1\[1\]\.cnn_inst.window_inst work window 0 1
+MobileNet.genblk1\[1\]\.cnn_inst work conv 0 1
+MobileNet.genblk1\[0\]\.cnn_inst.window_inst work window 0 1
+MobileNet.genblk1\[0\]\.cnn_inst work conv 0 1

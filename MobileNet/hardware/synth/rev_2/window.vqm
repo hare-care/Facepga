@@ -1,0 +1,48 @@
+//
+// Written by Synplify Premier 
+// Product Version "O-2018.09-SP1"
+// Program "Synplify Premier", Mapper "maprc, Build 4745R"
+// Mon Apr 22 10:59:30 2024
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/altera.v "
+// file 1 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/cycloneive.v "
+// file 2 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v "
+// file 3 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_lpm.v "
+// file 4 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_primitives.v "
+// file 5 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/hypermods.v "
+// file 6 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/umr_capim.v "
+// file 7 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/synip/hcei/zceistubs.v "
+// file 8 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_objects.v "
+// file 9 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_pipes.svh "
+// file 10 "\/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv "
+// file 11 "\/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/conv.sv "
+// file 12 "\/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/mobilenet.sv "
+// file 13 "\/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/fc/fc.sv "
+// file 14 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/nlconst.dat "
+
+// VQM4.1+ 
+module MobileNet (
+  clock,
+  reset
+)
+;
+
+/*  Synopsys
+.origName=MobileNet
+.langParams="cnn_count fc_op_count DATA_WIDTH"
+cnn_count=3
+fc_op_count=10
+DATA_WIDTH=8
+ */
+input clock ;
+input reset ;
+wire clock ;
+wire reset ;
+wire GND ;
+wire VCC ;
+  assign VCC = 1'b1;
+  assign GND = 1'b0;
+endmodule /* MobileNet */
+

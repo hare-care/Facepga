@@ -67,6 +67,7 @@ always_comb begin
             window_c = window_out;
             state_c = multiply;
         end
+        result_c = 0;
         allow_write_data = 1;
         idle_out = 1;
     end
@@ -74,7 +75,7 @@ always_comb begin
     multiply: begin
         for (loopVar = 0; loopVar < MULT_PER_CYCLE; loopVar += 1) begin
            if (multiply_count_s + loopVar < multTotal) begin
-              Mac_SubOps[loopVar] = (window_s[loopVar + multiply_count_s] * weights[loopVar + multiply_count_s]) + biases[loopVar + multiply_count_s];
+              Mac_SubOps[loopVar] = (window_s[loopVar + multiply_count_s] * 32'(signed'(weights[loopVar + multiply_count_s]))) + biases[loopVar + multiply_count_s];
            end else begin
               Mac_SubOps[loopVar] = 0;
            end

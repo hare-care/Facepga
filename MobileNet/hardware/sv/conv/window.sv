@@ -76,7 +76,7 @@ module window#(
         end
 
         //After reset box should never be empty once filled
-        if (cycleCounter_s == input_dim * 2 + 2) begin
+        if (cycleCounter_s == input_dim * 2 + 3) begin
             full_c = 1;
         end
         if (full_s == 1'b1) begin
@@ -114,7 +114,7 @@ module window#(
             if (stride == 1) begin
                 strideFlop_c = ~strideFlop_s;
             end
-            if (cycleCounter_s < buff_size - 1) begin
+            if (cycleCounter_s < buff_size) begin
                 cycleCounter_c = cycleCounter_s + 1;
             end else begin
                 cycleCounter_c = 0;
