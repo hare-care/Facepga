@@ -1,1 +1,0 @@
--distcompmode -link    -encrypt       -top work.MobileNet -osyn /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synwork/window_comp.srs /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/rev_2/synwork//distcomp/distcomp0/distcomp0.srs    

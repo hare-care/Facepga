@@ -31,12 +31,14 @@ always_comb begin
     result_c = result;
     operationCycleCounter_c = operationCycleCounter_s;
     done_out = 0;
+    intermediateValueSubOps = 0;
+    loopVar = 0;
 
     case (state_s)
 
     idle: begin
         if (start == 1) begin
-            state_c = idle;
+            state_c = calculating;
         end
     end
     calculating: begin
@@ -58,7 +60,7 @@ always_comb begin
     done: begin
         operationCycleCounter_c = 0;
         done_out = 1;
-        state_c = 1;
+        state_c = done;
     end
     default: begin
 

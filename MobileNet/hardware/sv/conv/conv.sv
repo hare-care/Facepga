@@ -75,14 +75,14 @@ always_comb begin
     multiply: begin
         for (loopVar = 0; loopVar < MULT_PER_CYCLE; loopVar += 1) begin
            if (multiply_count_s + loopVar < multTotal) begin
-              Mac_SubOps[loopVar] = (window_s[loopVar + multiply_count_s] * 32'(signed'(weights[loopVar + multiply_count_s]))) + biases[loopVar + multiply_count_s];
+              Mac_SubOps[loopVar] = (window_s[loopVar + multiply_count_s] * 32'(signed'(weights[loopVar + multiply_count_s]))) + 32'(signed'(biases[loopVar + multiply_count_s]));
            end else begin
               Mac_SubOps[loopVar] = 0;
            end
-           multiply_count_c = multiply_count_s + MULT_PER_CYCLE;
-           for (loopVar = 0; loopVar < MULT_PER_CYCLE; loopVar += 1) begin
-              result_c += Mac_SubOps[loopVar];
-           end
+        end
+        multiply_count_c = multiply_count_s + MULT_PER_CYCLE;
+        for (loopVar = 0; loopVar < MULT_PER_CYCLE; loopVar += 1) begin
+           result_c += Mac_SubOps[loopVar];
            if (multiply_count_c > multTotal) begin
              state_c = done;
            end

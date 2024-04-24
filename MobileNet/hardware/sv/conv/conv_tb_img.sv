@@ -46,7 +46,7 @@ module conv_tb_img();
     assign out_accepting_values = 1;
     conv #(
         .DATA_WIDTH(8),
-        .MULT_PER_CYCLE(1)
+        .MULT_PER_CYCLE(3)
     )top_inst(
         .clock(clock),
         .reset(reset),
@@ -185,7 +185,6 @@ module conv_tb_img();
                 end
                 out_rd_en = 1'b1;
                 i += BYTES_PER_PIXEL;
-                $write("%d i --- %d\n\n",i,BMP_DATA_SIZE);
                 j ++;
             end
              if (j % IM_WIDTH == 0 || j % IM_WIDTH == IM_WIDTH - 1) begin

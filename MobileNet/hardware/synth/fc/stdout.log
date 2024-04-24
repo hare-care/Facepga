@@ -1,0 +1,87 @@
+
+                             Synplify (R) Premier 
+
+                Version O-2018.09-SP1 for RHEL64 - Nov 27, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Starting:    /vol/synopsys/fpga/O-2018.09-SP1/linux_a_64/mbin/synplify
+Install:     /vol/synopsys/fpga/O-2018.09-SP1
+Hostname:    selina.ece.northwestern.edu
+Date:        Wed Apr 24 16:44:14 2024
+Version:     O-2018.09-SP1
+
+Arguments:   -product synplify_premier
+ProductType: synplify_premier
+
+License checkout: synplifypremierdp
+License: synplifypremierdp from server synopsyslm.ece.northwestern.edu (Using premium license)
+Licensed Vendor: All FPGA
+License Option: ident
+
+
+
+/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/fc.prjlog file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/fc.srr"
+Running: rev_1 in foreground
+
+Running fc|rev_1
+
+Running Flow: compile (Compile) on fc|rev_1
+# Wed Apr 24 16:44:28 2024
+
+Running Flow: compile_flow (Compile Process) on fc|rev_1
+# Wed Apr 24 16:44:28 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on fc|rev_1
+# Wed Apr 24 16:44:28 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/synwork/fc_comp.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/fc.srs
+
+compiler completed
+# Wed Apr 24 16:44:32 2024
+
+Return Code: 0
+Run Time:00h:00m:04s
+
+Running: multi_srs_gen (Multi-srs Generator) on fc|rev_1
+# Wed Apr 24 16:44:32 2024
+
+multi_srs_gen completed
+# Wed Apr 24 16:44:32 2024
+
+Return Code: 0
+Run Time:00h:00m:00s
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/synwork/fc_mult.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/fc.srs
+Complete: Compile Process on fc|rev_1
+
+Running: premap (Premap) on fc|rev_1
+# Wed Apr 24 16:44:32 2024
+
+premap completed with warnings
+# Wed Apr 24 16:44:33 2024
+
+Return Code: 1
+Run Time:00h:00m:01s
+Complete: Compile on fc|rev_1
+
+Running Flow: map (Map) on fc|rev_1
+# Wed Apr 24 16:44:33 2024
+License granted for 4 parallel jobs
+
+Running: fpga_mapper (Map & Optimize) on fc|rev_1
+# Wed Apr 24 16:44:33 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/synwork/fc_m.srm to /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/fc.srm
+
+fpga_mapper completed with warnings
+# Wed Apr 24 16:44:35 2024
+
+Return Code: 1
+Run Time:00h:00m:02s
+Complete: Map on fc|rev_1
+Complete: Logic Synthesis on fc|rev_1
+0exit status=0
+License checkin: synplifypremierdp

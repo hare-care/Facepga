@@ -1,0 +1,19 @@
+@P:  Part : ep4ce6ea22-7
+@P:  Worst Slack : -2.084
+@P:  conv|clock - Estimated Frequency : 72.0 MHz
+@P:  conv|clock - Requested Frequency : 84.7 MHz
+@P:  conv|clock - Estimated Period : 13.892
+@P:  conv|clock - Requested Period : 11.808
+@P:  conv|clock - Slack : -2.084
+@P:  System - Estimated Frequency : 1.0 MHz
+@P:  System - Requested Frequency : 1.0 MHz
+@P:  System - Estimated Period : 989.356
+@P:  System - Requested Period : 1000.000
+@P:  System - Slack : 10.643
+@P: conv Part : ep4ce6ea22-7
+@P: conv I/O ATOMs : 167
+@P: conv Total LUTs : 615 
+@P: conv Register bits : 725
+@P: conv .Simple_Multipliers_9_bit : 1
+@P: conv DSP Blocks : 1 (1 nine-bit DSP elements)
+@P:  CPU Time : 0h:00m:05s

@@ -1,3 +1,0 @@
-@E: CS187 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/fc/fc.sv":72:14:72:14|Expecting )
-@E: CS187 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/fc/fc.sv":83:0:83:8|Expecting endmodule
-
