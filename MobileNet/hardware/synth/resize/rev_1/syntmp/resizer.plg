@@ -1,0 +1,13 @@
+@P:  Part : ep4ce6ea22-7
+@P:  Worst Slack : -0.529
+@P:  resizer|clock - Estimated Frequency : 283.6 MHz
+@P:  resizer|clock - Requested Frequency : 333.6 MHz
+@P:  resizer|clock - Estimated Period : 3.527
+@P:  resizer|clock - Requested Period : 2.998
+@P:  resizer|clock - Slack : -0.529
+@P: resizer Part : ep4ce6ea22-7
+@P: resizer I/O ATOMs : 25
+@P: resizer Total LUTs : 185 
+@P: resizer Register bits : 23
+@P: resizer DSP Blocks : 0 (0 nine-bit DSP elements)
+@P:  CPU Time : 0h:00m:01s

@@ -1,0 +1,2 @@
+@W: FA406 |Environment variable QUARTUS_ROOTDIR not set. Cannot determine PAR version.
+@W: MT529 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":117:0:117:8|Found inferred clock resizer|clock which controls 25 sequential elements including state_s[3:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

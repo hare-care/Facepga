@@ -1,0 +1,321 @@
+
+                             Synplify (R) Premier 
+
+                Version O-2018.09-SP1 for RHEL64 - Nov 27, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Starting:    /vol/synopsys/fpga/O-2018.09-SP1/linux_a_64/mbin/synplify
+Install:     /vol/synopsys/fpga/O-2018.09-SP1
+Hostname:    joker.ece.northwestern.edu
+Date:        Mon Apr 29 12:48:12 2024
+Version:     O-2018.09-SP1
+
+Arguments:   -product synplify_premier
+ProductType: synplify_premier
+
+License checkout: synplifypremierdp
+License: synplifypremierdp from server synopsyslm.ece.northwestern.edu (Using premium license)
+Licensed Vendor: All FPGA
+License Option: ident
+
+
+
+/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool.prjlog file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/avg_pool.srr"
+Running: rev_1 in foreground
+
+Running avg_pool|rev_1
+
+Running Flow: compile (Compile) on avg_pool|rev_1
+# Mon Apr 29 12:48:39 2024
+
+Running Flow: compile_flow (Compile Process) on avg_pool|rev_1
+# Mon Apr 29 12:48:39 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on avg_pool|rev_1
+# Mon Apr 29 12:48:39 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/synwork/avg_pool_comp.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/avg_pool.srs
+
+compiler completed
+# Mon Apr 29 12:48:42 2024
+
+Return Code: 0
+Run Time:00h:00m:03s
+
+Running: multi_srs_gen (Multi-srs Generator) on avg_pool|rev_1
+# Mon Apr 29 12:48:42 2024
+
+multi_srs_gen completed
+# Mon Apr 29 12:48:42 2024
+
+Return Code: 0
+Run Time:00h:00m:00s
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/synwork/avg_pool_mult.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/avg_pool.srs
+Complete: Compile Process on avg_pool|rev_1
+
+Running: premap (Premap) on avg_pool|rev_1
+# Mon Apr 29 12:48:42 2024
+
+premap completed with warnings
+# Mon Apr 29 12:48:43 2024
+
+Return Code: 1
+Run Time:00h:00m:01s
+Complete: Compile on avg_pool|rev_1
+
+Running Flow: map (Map) on avg_pool|rev_1
+# Mon Apr 29 12:48:43 2024
+License granted for 4 parallel jobs
+
+Running: fpga_mapper (Map & Optimize) on avg_pool|rev_1
+# Mon Apr 29 12:48:43 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/synwork/avg_pool_m.srm to /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/avg_pool.srm
+
+fpga_mapper completed with warnings
+# Mon Apr 29 12:48:44 2024
+
+Return Code: 1
+Run Time:00h:00m:01s
+Complete: Map on avg_pool|rev_1
+Complete: Logic Synthesis on avg_pool|rev_1
+0Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/avg_pool.srr to /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/backup/avg_pool.srr
+log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/avg_pool.srr"
+Running: rev_1 in foreground
+
+Running avg_pool|rev_1
+
+Running Flow: compile (Compile) on avg_pool|rev_1
+# Mon Apr 29 13:08:09 2024
+
+Running Flow: compile_flow (Compile Process) on avg_pool|rev_1
+# Mon Apr 29 13:08:09 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on avg_pool|rev_1
+# Mon Apr 29 13:08:09 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/synwork/avg_pool_comp.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/avg_pool.srs
+
+compiler completed
+# Mon Apr 29 13:08:12 2024
+
+Return Code: 0
+Run Time:00h:00m:03s
+
+Running: multi_srs_gen (Multi-srs Generator) on avg_pool|rev_1
+# Mon Apr 29 13:08:12 2024
+
+multi_srs_gen completed
+# Mon Apr 29 13:08:13 2024
+
+Return Code: 0
+Run Time:00h:00m:00s
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/synwork/avg_pool_mult.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/avg_pool.srs
+Complete: Compile Process on avg_pool|rev_1
+
+Running: premap (Premap) on avg_pool|rev_1
+# Mon Apr 29 13:08:13 2024
+
+premap completed with warnings
+# Mon Apr 29 13:08:13 2024
+
+Return Code: 1
+Run Time:00h:00m:00s
+Complete: Compile on avg_pool|rev_1
+
+Running Flow: map (Map) on avg_pool|rev_1
+# Mon Apr 29 13:08:13 2024
+License granted for 4 parallel jobs
+
+Running: fpga_mapper (Map & Optimize) on avg_pool|rev_1
+# Mon Apr 29 13:08:13 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/synwork/avg_pool_m.srm to /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/rev_1/avg_pool.srm
+
+fpga_mapper completed with warnings
+# Mon Apr 29 13:08:14 2024
+
+Return Code: 1
+Run Time:00h:00m:01s
+Complete: Map on avg_pool|rev_1
+Complete: Logic Synthesis on avg_pool|rev_1
+0log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srr"
+Running: rev_1 in foreground
+
+Running resizer|rev_1
+
+Running Flow: compile (Compile) on resizer|rev_1
+# Mon Apr 29 13:08:50 2024
+
+Running Flow: compile_flow (Compile Process) on resizer|rev_1
+# Mon Apr 29 13:08:50 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on resizer|rev_1
+# Mon Apr 29 13:08:50 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/synwork/resizer_comp.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srs
+
+compiler completed
+# Mon Apr 29 13:08:56 2024
+
+Return Code: 0
+Run Time:00h:00m:06s
+
+Running: multi_srs_gen (Multi-srs Generator) on resizer|rev_1
+# Mon Apr 29 13:08:56 2024
+
+multi_srs_gen completed
+# Mon Apr 29 13:08:56 2024
+
+Return Code: 0
+Run Time:00h:00m:00s
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/synwork/resizer_mult.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srs
+Complete: Compile Process on resizer|rev_1
+
+Running: premap (Premap) on resizer|rev_1
+# Mon Apr 29 13:08:56 2024
+
+premap completed with warnings
+# Mon Apr 29 13:08:57 2024
+
+Return Code: 1
+Run Time:00h:00m:01s
+Complete: Compile on resizer|rev_1
+
+Running Flow: map (Map) on resizer|rev_1
+# Mon Apr 29 13:08:57 2024
+License granted for 4 parallel jobs
+
+Running: fpga_mapper (Map & Optimize) on resizer|rev_1
+# Mon Apr 29 13:08:57 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/synwork/resizer_m.srm to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srm
+
+fpga_mapper completed with warnings
+# Mon Apr 29 13:08:59 2024
+
+Return Code: 1
+Run Time:00h:00m:02s
+Complete: Map on resizer|rev_1
+Complete: Logic Synthesis on resizer|rev_1
+0Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srr to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/backup/resizer.srr
+log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srr"
+Running: rev_1 in foreground
+
+Running resizer|rev_1
+
+Running Flow: compile (Compile) on resizer|rev_1
+# Mon Apr 29 13:09:09 2024
+
+Running Flow: compile_flow (Compile Process) on resizer|rev_1
+# Mon Apr 29 13:09:09 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on resizer|rev_1
+# Mon Apr 29 13:09:09 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/synwork/resizer_comp.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srs
+
+compiler completed
+# Mon Apr 29 13:09:16 2024
+
+Return Code: 0
+Run Time:00h:00m:07s
+
+Running: multi_srs_gen (Multi-srs Generator) on resizer|rev_1
+# Mon Apr 29 13:09:16 2024
+
+multi_srs_gen completed
+# Mon Apr 29 13:09:16 2024
+
+Return Code: 0
+Run Time:00h:00m:00s
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/synwork/resizer_mult.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srs
+Complete: Compile Process on resizer|rev_1
+
+Running: premap (Premap) on resizer|rev_1
+# Mon Apr 29 13:09:16 2024
+
+premap completed with warnings
+# Mon Apr 29 13:09:16 2024
+
+Return Code: 1
+Run Time:00h:00m:00s
+Complete: Compile on resizer|rev_1
+
+Running Flow: map (Map) on resizer|rev_1
+# Mon Apr 29 13:09:16 2024
+License granted for 4 parallel jobs
+
+Running: fpga_mapper (Map & Optimize) on resizer|rev_1
+# Mon Apr 29 13:09:16 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/synwork/resizer_m.srm to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srm
+
+fpga_mapper completed with warnings
+# Mon Apr 29 13:09:18 2024
+
+Return Code: 1
+Run Time:00h:00m:02s
+Complete: Map on resizer|rev_1
+Complete: Logic Synthesis on resizer|rev_1
+0log file: "/home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srr"
+Running: rev_1 in foreground
+
+Running resizer|rev_1
+
+Running Flow: compile (Compile) on resizer|rev_1
+# Mon Apr 29 13:09:34 2024
+
+Running Flow: compile_flow (Compile Process) on resizer|rev_1
+# Mon Apr 29 13:09:34 2024
+License granted for 4 parallel jobs
+
+Running: compiler (Compile Input) on resizer|rev_1
+# Mon Apr 29 13:09:34 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/synwork/resizer_comp.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srs
+
+compiler completed
+# Mon Apr 29 13:09:41 2024
+
+Return Code: 0
+Run Time:00h:00m:07s
+
+Running: multi_srs_gen (Multi-srs Generator) on resizer|rev_1
+# Mon Apr 29 13:09:41 2024
+
+multi_srs_gen completed
+# Mon Apr 29 13:09:41 2024
+
+Return Code: 0
+Run Time:00h:00m:00s
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/synwork/resizer_mult.srs to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srs
+Complete: Compile Process on resizer|rev_1
+
+Running: premap (Premap) on resizer|rev_1
+# Mon Apr 29 13:09:41 2024
+
+premap completed with warnings
+# Mon Apr 29 13:09:42 2024
+
+Return Code: 1
+Run Time:00h:00m:01s
+Complete: Compile on resizer|rev_1
+
+Running Flow: map (Map) on resizer|rev_1
+# Mon Apr 29 13:09:42 2024
+License granted for 4 parallel jobs
+
+Running: fpga_mapper (Map & Optimize) on resizer|rev_1
+# Mon Apr 29 13:09:42 2024
+Copied /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/synwork/resizer_m.srm to /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/resizer.srm
+
+fpga_mapper completed with warnings
+# Mon Apr 29 13:09:44 2024
+
+Return Code: 1
+Run Time:00h:00m:02s
+Complete: Map on resizer|rev_1
+Complete: Logic Synthesis on resizer|rev_1
+0exit status=0
+License checkin: synplifypremierdp
