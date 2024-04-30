@@ -1,8 +1,0 @@
-/vol/synopsys/fpga/O-2018.09-SP1/bin/syn_nfilter  -link  -multisrs  /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/synwork/resizer_comp.srs  -osyn  /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/synwork/resizer_mult.srs  -log  /home/ted4152/Spring24/Facepga/MobileNet/hardware/synth/resize/rev_1/synlog/resizer_multi_srs_gen.srr 
-relcom:/vol/synopsys/fpga/O-2018.09-SP1/bin/syn_nfilter -link -multisrs ../synwork/resizer_comp.srs -osyn ../synwork/resizer_mult.srs -log ../synlog/resizer_multi_srs_gen.srr
-rc:0 success:1 runtime:0
-file:../synwork/resizer_comp.srs|io:i|time:1714414180|size:5044|exec:0|csum:2D1974BCB350196967F1CC7671B3DA0A
-file:../synwork/resizer_mult.srs|io:o|time:1714414181|size:4679|exec:0|csum:
-file:../synlog/resizer_multi_srs_gen.srr|io:o|time:1714414181|size:1592|exec:0|csum:
-file:/vol/synopsys/fpga/O-2018.09-SP1/linux_a_64/syn_nfilter|io:i|time:1543382463|size:12202632|exec:1|csum:2CF5CA82A12C53A85C3E36D57C2461DC
-file:/vol/synopsys/fpga/O-2018.09-SP1/bin/syn_nfilter|io:i|time:1543382354|size:368|exec:1|csum:004E4455B64BA10AD6A92FB2301610E0

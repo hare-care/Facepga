@@ -20,16 +20,17 @@ module resizer #(
     output logic                        outPixelValid
 );
 
-localparam BOTTOM_CROP = INPUT_HEIGHT - VERT_CROP_COUNT - 1;
+localparam BOTTOM_CROP = INPUT_HEIGHT - VERT_CROP_COUNT ;
 localparam LEFT_CROP = HORIZ_CROP_COUNT - 2; // Comparing next value which is curr ++
 localparam RIGHT_CROP = INPUT_WIDTH - HORIZ_CROP_COUNT - 2;
+localparam TOP_CROP = VERT_CROP_COUNT - 1;
 
 typedef enum logic[1:0] {idle, crop, resize, done} resizerState;
 resizerState state_c, state_s;
 
 logic cropCounter_c, cropCounter_s; //Get 2x2 before outputting data
-logic [9:0] rowCounter_c, rowCounter_s;
-logic [9:0] colCounter_c, colCounter_s;
+logic [10:0] rowCounter_c, rowCounter_s;
+logic [10:0] colCounter_c, colCounter_s;
 logic [OUT_DIM-1:0][10:0] rTotal_c, rTotal_s , bTotal_c, bTotal_s , gTotal_c, gTotal_s; //8 + 3 bits
 
 always_comb begin
@@ -53,7 +54,7 @@ always_comb begin
     end
     crop: begin
         //Only transition to resize when next pixel is in the boundary
-        if (rowCounter_s > VERT_CROP_COUNT - 1 && rowCounter_s < BOTTOM_CROP) begin
+        if (rowCounter_s > TOP_CROP && rowCounter_s < BOTTOM_CROP) begin
         //Within resizable rows
             if (colCounter_s > LEFT_CROP && colCounter_s < RIGHT_CROP) begin
                 state_c = resize;
@@ -87,7 +88,7 @@ always_comb begin
         end
         //Check for exit conditions
         if (colCounter_s > RIGHT_CROP) begin
-            if (rowCounter_s >= BOTTOM_CROP) begin
+            if (rowCounter_s >= BOTTOM_CROP - 1) begin
                 state_c = done;
             end else begin
                 state_c = crop;
