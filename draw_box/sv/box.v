@@ -11,11 +11,13 @@ module box #(
     input rd_en,
     input wr_en,
     input [23:0] din,
-    output [23:0] dout
+    output reg [23:0] dout
 );
 
 reg [9:0] x_cnt, x_cnt_c, y_cnt, y_cnt_c;
 wire [9:0] bottom, top, right, left;
+
+reg [23:0] dout_c;
 
 assign bottom = y - (height/2);
 assign top = y + (height/2);
@@ -33,6 +35,7 @@ always @(posedge clk or posedge reset) begin
         x_cnt <= x_cnt_c;
         y_cnt <= y_cnt_c;
     end
+end
 
 always @(*) begin
     x_cnt_c <= x_cnt + 1;
@@ -53,22 +56,5 @@ always @(*) begin
             dout_c <= 24'HFF0000;
         end
     end
-    
-
-    
-
 end
-
-
-end
-
-
-always @(*) begin
-    // if the x coord of din or y coord of din matches bounding box
-    // make output pixel red.
-    // if x coord = center + width/2 or - width/2
-    // if y coord = center + height/2 or - height/2
-
-end
-
-endmodule;
+endmodule

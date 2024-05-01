@@ -12,7 +12,7 @@ module box_top
 );
 
 // input fifo to box unit
-wire input_rd_en, input_dout;
+wire input_rd_en, input_empty;
 wire [23:0] input_dout;
 
 // box unit to output fifo
