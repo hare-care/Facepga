@@ -39,19 +39,25 @@ localparam BMP_HEADER_SIZE = 54;
 localparam BYTES_PER_PIXEL = 3;
 localparam BMP_DATA_SIZE = WIDTH*HEIGHT*BYTES_PER_PIXEL;
 
-motion_detect_top motion_detect_top_inst (
+logic [9:0] x_in, y_in, width_in, height_in;
+assign x_in = 100;
+assign y_in = 100;
+assign width_in = 50;
+assign height_in = 50;
+
+box_top DUT (
     .clock(clock),
     .reset(reset),
+    .x(x_in),
+    .y(y_in),
+    .width(width_in),
+    .height(height_in),
     .input_full(in_full),
     .input_wr_en(in_wr_en),
     .input_din(in_din),
     .dout_rd_en(out_rd_en),
     .dout_empty(out_empty),
     .dout(out_dout)
-);
-
-box_top DUT (
-
 );
 
 always begin

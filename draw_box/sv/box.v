@@ -1,6 +1,6 @@
 module box #(
-    parameter IMG_WIDTH = 720,
-    parameter IMG_HEIGHT = 540
+    parameter IMG_WIDTH = 768,
+    parameter IMG_HEIGHT = 576
 )(
     input clk,
     input reset,
