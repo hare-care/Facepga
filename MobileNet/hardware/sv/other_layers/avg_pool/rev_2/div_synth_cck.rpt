@@ -1,0 +1,145 @@
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify (R) Premier
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.9 (Ootpa)
+Hostname: joker.ece.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 126575
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_2
+
+# Written on Thu May  2 13:24:14 2024
+
+##### DESIGN INFO #######################################################
+
+Top View:                "avg_pool"
+Constraint File(s):      (none)
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 0 issues in 0 out of 0 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting                               Ending                                 |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+avg_pool|clock                         avg_pool|clock                         |     242.345          |     No paths         |     No paths         |     No paths                         
+avg_pool|clock                         div_32s_32s|state_derived_clock[5]     |     242.345          |     No paths         |     121.172          |     No paths                         
+div_32s_32s|state_derived_clock[5]     avg_pool|clock                         |     242.345          |     No paths         |     No paths         |     121.172                          
+=========================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:average[0]
+p:average[1]
+p:average[2]
+p:average[3]
+p:average[4]
+p:average[5]
+p:average[6]
+p:average[7]
+p:average[8]
+p:average[9]
+p:average[10]
+p:average[11]
+p:average[12]
+p:average[13]
+p:average[14]
+p:average[15]
+p:average[16]
+p:average[17]
+p:average[18]
+p:average[19]
+p:average[20]
+p:average[21]
+p:average[22]
+p:average[23]
+p:average[24]
+p:average[25]
+p:average[26]
+p:average[27]
+p:average[28]
+p:average[29]
+p:average[30]
+p:average[31]
+p:done
+p:newPointData[0]
+p:newPointData[1]
+p:newPointData[2]
+p:newPointData[3]
+p:newPointData[4]
+p:newPointData[5]
+p:newPointData[6]
+p:newPointData[7]
+p:newPointData[8]
+p:newPointData[9]
+p:newPointData[10]
+p:newPointData[11]
+p:newPointData[12]
+p:newPointData[13]
+p:newPointData[14]
+p:newPointData[15]
+p:newPointData[16]
+p:newPointData[17]
+p:newPointData[18]
+p:newPointData[19]
+p:newPointData[20]
+p:newPointData[21]
+p:newPointData[22]
+p:newPointData[23]
+p:newPointData[24]
+p:newPointData[25]
+p:newPointData[26]
+p:newPointData[27]
+p:newPointData[28]
+p:newPointData[29]
+p:newPointData[30]
+p:newPointData[31]
+p:newPointValid
+p:reset
+
+
+Inapplicable constraints
+************************
+
+(none)
+
+
+Applicable constraints with issues
+**********************************
+
+(none)
+
+
+Constraints with matching wildcard expressions
+**********************************************
+
+(none)
+
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report

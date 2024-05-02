@@ -1,0 +1,291 @@
+//
+// Written by Synplify Premier 
+// Product Version "O-2018.09-SP1"
+// Program "Synplify Premier", Mapper "maprc, Build 4745R"
+// Thu May  2 13:22:35 2024
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/altera.v "
+// file 1 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/cycloneive.v "
+// file 2 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_mf.v "
+// file 3 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_lpm.v "
+// file 4 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/altera/quartus_prime181/altera_primitives.v "
+// file 5 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/hypermods.v "
+// file 6 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/umr_capim.v "
+// file 7 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/synip/hcei/zceistubs.v "
+// file 8 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_objects.v "
+// file 9 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/vlog/scemi_pipes.svh "
+// file 10 "\/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv "
+// file 11 "\/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/avg_pool.sv "
+// file 12 "\/vol/synopsys/fpga/O-2018.09-SP1/lib/nlconst.dat "
+
+// VQM4.1+ 
+module avg_pool (
+  clock,
+  reset,
+  newPointData,
+  newPointValid,
+  done,
+  average
+)
+;
+
+/*  Synopsys
+.origName=avg_pool
+.langParams="DATA_WIDTH"
+DATA_WIDTH=32
+ */
+input clock ;
+input reset ;
+input [31:0] newPointData ;
+input newPointValid ;
+output done ;
+output [31:0] average ;
+wire clock ;
+wire reset ;
+wire newPointValid ;
+wire done ;
+wire VCC ;
+wire GND ;
+wire N_69 ;
+wire N_70 ;
+wire N_71 ;
+wire N_209 ;
+wire N_210 ;
+wire N_211 ;
+wire N_212 ;
+wire N_213 ;
+wire N_214 ;
+wire N_215 ;
+wire N_216 ;
+wire N_217 ;
+wire N_218 ;
+wire N_219 ;
+wire N_220 ;
+wire N_221 ;
+wire N_222 ;
+wire N_223 ;
+wire N_224 ;
+wire N_225 ;
+wire N_226 ;
+wire N_227 ;
+wire N_228 ;
+wire N_229 ;
+wire N_230 ;
+wire N_231 ;
+wire N_232 ;
+wire N_233 ;
+wire N_234 ;
+wire N_235 ;
+wire N_236 ;
+wire N_237 ;
+wire N_238 ;
+wire N_239 ;
+wire N_240 ;
+wire N_241 ;
+wire N_242 ;
+//@0:1
+  assign VCC = 1'b1;
+//@0:1
+  assign GND = 1'b0;
+// @11:11
+  cycloneive_io_obuf average_out_31_ (
+	.o(average[31]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_30_ (
+	.o(average[30]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_29_ (
+	.o(average[29]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_28_ (
+	.o(average[28]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_27_ (
+	.o(average[27]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_26_ (
+	.o(average[26]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_25_ (
+	.o(average[25]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_24_ (
+	.o(average[24]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_23_ (
+	.o(average[23]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_22_ (
+	.o(average[22]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_21_ (
+	.o(average[21]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_20_ (
+	.o(average[20]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_19_ (
+	.o(average[19]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_18_ (
+	.o(average[18]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_17_ (
+	.o(average[17]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_16_ (
+	.o(average[16]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_15_ (
+	.o(average[15]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_14_ (
+	.o(average[14]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_13_ (
+	.o(average[13]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_12_ (
+	.o(average[12]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_11_ (
+	.o(average[11]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_10_ (
+	.o(average[10]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_9_ (
+	.o(average[9]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_8_ (
+	.o(average[8]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_7_ (
+	.o(average[7]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_6_ (
+	.o(average[6]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_5_ (
+	.o(average[5]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_4_ (
+	.o(average[4]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_3_ (
+	.o(average[3]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_2_ (
+	.o(average[2]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_1_ (
+	.o(average[1]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:11
+  cycloneive_io_obuf average_out_0_ (
+	.o(average[0]),
+	.i(GND),
+	.oe(VCC)
+);
+// @11:10
+  cycloneive_io_obuf done_out (
+	.o(done),
+	.i(VCC),
+	.oe(VCC)
+);
+endmodule /* avg_pool */
+

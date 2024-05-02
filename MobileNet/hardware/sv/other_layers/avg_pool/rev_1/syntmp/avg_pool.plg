@@ -1,0 +1,13 @@
+@P:  Part : ep4ce6ea22-7
+@P:  Worst Slack : NA
+@P:  avg_pool|clock - Estimated Frequency : NA
+@P:  avg_pool|clock - Requested Frequency : 569.9 MHz
+@P:  avg_pool|clock - Estimated Period : NA
+@P:  avg_pool|clock - Requested Period : 1.755
+@P:  avg_pool|clock - Slack : NA
+@P: avg_pool Part : ep4ce6ea22-7
+@P: avg_pool I/O ATOMs : 0
+@P: avg_pool Total LUTs : 0 
+@P: avg_pool Register bits : 0
+@P: avg_pool DSP Blocks : 0 (0 nine-bit DSP elements)
+@P:  CPU Time : 0h:00m:00s
