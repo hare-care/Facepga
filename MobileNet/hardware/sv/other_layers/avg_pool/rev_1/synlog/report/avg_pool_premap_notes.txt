@@ -1,0 +1,10 @@
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF915 |Option synthesis_strategy=advanced is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":85:4:85:7|Removing sequential instance remainder[31:0] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.lat(prim) because it does not drive other instances.
+@N: BN225 |Writing default property annotation file /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/rev_1/avg_pool.sap.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance b[31:0] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.

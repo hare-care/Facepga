@@ -1,0 +1,13 @@
+#--  Synopsys, Inc.
+#--  Version O-2018.09-SP1
+#--  Project file /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.prd
+#--  Written on Thu May  2 13:22:52 2024
+
+#
+### Watch Implementation type ###
+#
+watch_impl -all
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear

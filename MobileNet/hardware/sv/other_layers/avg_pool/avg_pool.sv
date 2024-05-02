@@ -38,10 +38,12 @@ module avg_pool#(
 
     always_comb begin
         total_value_c = total_value_s;
+        inputCounter_c = inputCounter_s;
         state_c = state_s;
         reset_div = 0;
         div_dividend = 0;
         div_go = 0;
+        avg_c = 0;
         case (state_s) 
         accepting_new: begin
             if (newPointValid == 1) begin
@@ -64,7 +66,7 @@ module avg_pool#(
                 state_c = accepting_new;
                 total_value_c = 0;
                 inputCounter_c = 0;
-                average = div_quotient;
+                avg_c = div_quotient;
                 done = 1;
             end
         end
@@ -76,10 +78,12 @@ module avg_pool#(
             total_value_s <= 0;
             state_s <= accepting_new;
             inputCounter_s <= 0;
+            average <= 0;
         end else begin
             total_value_s <= total_value_c;
             state_s <= state_c;
             inputCounter_s <= inputCounter_c;
+            average <= avg_c;
         end
     end
 

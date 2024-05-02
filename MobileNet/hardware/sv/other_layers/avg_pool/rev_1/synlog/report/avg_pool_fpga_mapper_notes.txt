@@ -1,0 +1,81 @@
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF915 |Option synthesis_strategy=advanced is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MT206 |Auto Constrain mode is enabled
+@N: MO231 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/avg_pool.sv":76:4:76:12|Found counter in view:work.avg_pool(verilog) instance inputCounter_s[5:0] 
+@N: MO231 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Found counter in view:work.div_32s_32s(verilog) instance msb_a[31:0] 
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[31] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[30] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[29] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[28] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[27] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[26] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[25] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[24] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[23] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[22] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[21] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[20] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[19] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[18] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[17] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[16] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[15] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[14] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[13] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[12] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[11] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[10] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[9] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[8] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[7] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[6] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[5] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[4] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[3] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[2] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[1] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Removing sequential instance q[0] (in view: work.div_32s_32s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN115 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/avg_pool.sv":24:6:24:12|Removing instance divider (in view: work.avg_pool(verilog)) of type view:work.div_32s_32s(verilog) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/avg_pool.sv":76:4:76:12|Removing sequential instance state_s[0] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFF_N(PRIM) because it does not drive other instances.
+@N: BN362 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/avg_pool.sv":76:4:76:12|Removing sequential instance state_s[1] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFF_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[31] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[30] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[29] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[28] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[27] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[26] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[25] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[24] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[23] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[22] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[21] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[20] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[19] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[18] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[17] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[16] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[15] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[14] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[13] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[12] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[11] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[10] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[9] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[8] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[7] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[6] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[5] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[4] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[3] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[2] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[1] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance total_value_s[0] (in view: work.avg_pool(verilog)) of type view:ALTERA_APEX.S_DFFE_N(PRIM) because it does not drive other instances.
+@N: MT611 :|Automatically generated clock div_32s_32s|state_derived_clock[5] is not used and is being removed
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+@N: FA174 |The following device usage report estimates place and route data. Please look at the place and route report for final resource usage.

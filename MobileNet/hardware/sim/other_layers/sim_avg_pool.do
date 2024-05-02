@@ -2,7 +2,7 @@ setenv LMC_TIMEUNIT -9
 vlib work
 vmap work work
 
-vlog -work work "../../sv/other_layers/avg_pool/div.sv"
+vlog -work work "../../sv/other_layers/avg_pool/div_synth.sv"
 vlog -work work "../../sv/other_layers/avg_pool/avg_pool.sv"
 vlog -work work "../../sv/other_layers/avg_pool/avg_pool_tb.sv"
 
