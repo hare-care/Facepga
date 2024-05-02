@@ -4,8 +4,8 @@
 #include <sys/time.h>
 
 #define THRESHOLD 50
-#define BOX_X 0
-#define BOX_Y 100
+#define BOX_X 500
+#define BOX_Y 300
 #define BOX_HEIGHT 50
 #define BOX_WIDTH 50
 	

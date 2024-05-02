@@ -1,3 +1,5 @@
+`timescale 1 ns / 1 ns
+
 module box #(
     parameter IMG_WIDTH = 768,
     parameter IMG_HEIGHT = 576
@@ -38,22 +40,23 @@ always @(posedge clk or posedge reset) begin
 end
 
 always @(*) begin
-    x_cnt_c <= x_cnt + 1;
+    y_cnt_c = y_cnt;
+    x_cnt_c = x_cnt + 1;
     if (x_cnt_c >= IMG_WIDTH) begin
-        x_cnt_c <= 10'b0;
-        y_cnt_c <= y_cnt + 1;
+        x_cnt_c = 10'b0;
+        y_cnt_c = y_cnt + 1;
         if (y_cnt_c >= IMG_HEIGHT) begin
-            y_cnt_c <= 10'b0;
+            y_cnt_c = 10'b0;
         end
     end
-    dout_c <= din;
+    dout_c = din;
     if ((y_cnt == top) || (y_cnt == bottom)) begin
         if ((left <= x_cnt) && (x_cnt <= right)) begin
-            dout_c <= 24'HFF0000;
+            dout_c = 24'H0000FF;
         end
     end else if ((x_cnt == left) || (x_cnt == right)) begin
         if ((bottom <= y_cnt) && (y_cnt <= top)) begin
-            dout_c <= 24'HFF0000;
+            dout_c = 24'H0000FF;
         end
     end
 end

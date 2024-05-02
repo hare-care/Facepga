@@ -1,3 +1,5 @@
+`timescale 1 ns / 1 ns
+
 module box_top 
 (
     input  clock,
@@ -21,7 +23,7 @@ wire out_full, out_wr_en;
 
 
 fifo #(
-    .FIFO_BUFFER_SIZE(32),
+    .FIFO_BUFFER_SIZE(1024),
     .FIFO_DATA_WIDTH(24)
 ) input_inst (
     .reset(reset),
@@ -51,7 +53,7 @@ box box_unit (
 assign out_wr_en = !out_full;
 
 fifo #(
-    .FIFO_BUFFER_SIZE(32),
+    .FIFO_BUFFER_SIZE(1024),
     .FIFO_DATA_WIDTH(24)
 ) out_inst (
     .reset(reset),
