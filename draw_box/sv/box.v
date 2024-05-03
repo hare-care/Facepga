@@ -23,8 +23,8 @@ reg [23:0] dout_c;
 
 assign bottom = y - (height/2);
 assign top = y + (height/2);
-assign left = x - (height/2);
-assign right = x + (height/2);
+assign left = x - (width/2);
+assign right = x + (width/2);
 
 
 always @(posedge clk or posedge reset) begin
