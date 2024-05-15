@@ -51,7 +51,6 @@ logic [DIVIDEND_WIDTH-1:0] q, q_c;
 // logic [DIVISOR_WIDTH-1:0] r, r_c;
 logic internal_sign;
 integer p;
-integer one;
 integer a_minus_b;
 integer remainder_condition;
 integer msb_a, msb_a_c;
@@ -77,8 +76,16 @@ end
 
 
 always_comb begin
+    overflow = 1'b0; //default to 0
+    remainder = '0; //default to 0
+    quotient = q; // default to q
+    a_c = a;
     b_c = b;
     q_c = q;
+    internal_sign = 1'b0; // defaulted value
+    a_minus_b = '0; //defaulted value
+    remainder_condition = 1'b0; // defaulted value
+    p = '0; // defaulted value
     valid_out = '0;
     msb_a_c = msb_a;
     msb_b_c = msb_b;
@@ -96,9 +103,9 @@ always_comb begin
             a_c = (dividend[31] == 1'b0) ? $signed(dividend) : $signed(-dividend);
             b_c = (divisor[31] == 1'b0) ? $signed(divisor) : $signed(-divisor);
             q_c = '0;
-            p = 0;
-            msb_a_c = 32;
-            msb_b_c = 32;
+            p = 0; 
+            msb_a_c = 31; // 32 was reading unitialized signals
+            msb_b_c = 31;
 
             if (divisor == 1) begin
                 state_c = B_EQ_1;
@@ -122,7 +129,7 @@ always_comb begin
             state_c = (a[msb_a] == 1'b1) ? GET_MSB_B : GET_MSB_A;    
         end
         
-        GET_MSB_A: begin
+        GET_MSB_B: begin // fixed typo (before was also GET_MSB_A)
             msb_b_c = (a[msb_b] == 1'b1) ? msb_b : msb_b - 1;    
             state_c = (a[msb_b] == 1'b1) ? LOOP : GET_MSB_B;    
         end
