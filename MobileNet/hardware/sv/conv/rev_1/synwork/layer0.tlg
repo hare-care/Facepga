@@ -1,0 +1,121 @@
+Selecting top level module resizer
+@N: CG364 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":3:7:3:13|Synthesizing module resizer in library work.
+Running optimization stage 1 on resizer .......
+Running optimization stage 2 on resizer .......
+@N: CL201 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Trying to extract state machine for register state_s.
+Extracted state machine for register state_s
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[0][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[1][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[2][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[3][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[4][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[5][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[6][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[7][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[8][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[9][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[10][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[11][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[12][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[13][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[14][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[15][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[16][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[17][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[18][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[19][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[20][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[21][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[22][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[23][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[24][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[25][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[26][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[27][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[28][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[29][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[30][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[31][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[32][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[33][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[34][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[35][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[36][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[37][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[38][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[39][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[40][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[41][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[42][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[43][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[44][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[45][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[46][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[47][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[48][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[49][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[50][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[51][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[52][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[53][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[54][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[55][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[56][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[57][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[58][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[59][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[60][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[61][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[62][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[63][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[64][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[65][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[66][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[67][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[68][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[69][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[70][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[71][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[72][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[73][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[74][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[75][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[76][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[77][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[78][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[79][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[80][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[81][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[82][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[83][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[84][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[85][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[86][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[87][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[88][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[89][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[90][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[91][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[92][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[93][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[94][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[95][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[96][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[97][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[98][9:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|Pruning unused register bTotal_s[99][9:0]. Make sure that there are no unused intermediate registers.
+
+Only the first 100 messages of id 'CL169' are reported. To see all messages use 'report_messages -log /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/rev_1/synlog/processing_state_controller_compiler.srr -id CL169' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {CL169} -count unlimited' in the Tcl shell.
+@W: CL246 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":13:40:13:51|Input port bits 20 to 16 of newPixelData[23:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL246 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":13:40:13:51|Input port bits 12 to 8 of newPixelData[23:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL246 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":13:40:13:51|Input port bits 4 to 0 of newPixelData[23:0] are unused. Assign logic for all port bits or change the input port size.
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/rev_1/synwork/layer0.rt.csv
+

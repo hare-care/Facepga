@@ -1,0 +1,353 @@
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.9 (Ootpa)
+Hostname: joker.ece.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 126575
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+
+#### START OF AREA REPORT #####[
+
+Part:			5CGXFC7C6FC23-6 (Altera)
+
+-------------------------------------------------------------------------------------------
+########   Utilization report for  Top level view:   processing_state_controller   ########
+===========================================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     646                100 %                
+======================================================
+Total SEQUENTIAL ATOMS in the block processing_state_controller:	646 (29.05 % Utilization)
+
+
+COMBINATIONAL ATOMS
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+ATOMS                    763                100 %                
+COMB ARITHMETIC MODE     609                100 %                
+=================================================================
+Total COMBINATIONAL ATOMS in the block processing_state_controller:	1372 (61.69 % Utilization)
+
+
+DSPs
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACs     3                  100 %                
+=================================================
+Total DSPs in the block processing_state_controller:	3 (0.13 % Utilization)
+
+---------------------------------------------------------------------------------
+########   Utilization report for  cell:   network_components_8s_9s_4s   ########
+Instance path:   processing_state_controller.network_components_8s_9s_4s         
+=================================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     451                69.8 %               
+======================================================
+Total SEQUENTIAL ATOMS in the block processing_state_controller.network_components_8s_9s_4s:	451 (20.28 % Utilization)
+
+
+COMBINATIONAL ATOMS
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+ATOMS                    721                94.5 %               
+COMB ARITHMETIC MODE     437                71.8 %               
+=================================================================
+Total COMBINATIONAL ATOMS in the block processing_state_controller.network_components_8s_9s_4s:	1158 (52.07 % Utilization)
+
+
+DSPs
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACs     3                  100 %                
+=================================================
+Total DSPs in the block processing_state_controller.network_components_8s_9s_4s:	3 (0.13 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   avg_pool_32s   ########
+Instance path:   network_components_8s_9s_4s.avg_pool_32s         
+==================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     230                35.6 %               
+======================================================
+Total SEQUENTIAL ATOMS in the block network_components_8s_9s_4s.avg_pool_32s:	230 (10.34 % Utilization)
+
+
+COMBINATIONAL ATOMS
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+ATOMS                    496                65 %                 
+COMB ARITHMETIC MODE     332                54.5 %               
+=================================================================
+Total COMBINATIONAL ATOMS in the block network_components_8s_9s_4s.avg_pool_32s:	828 (37.23 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   div_32s_32s   ########
+Instance path:   avg_pool_32s.div_32s_32s                        
+=================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     178                27.6 %               
+======================================================
+Total SEQUENTIAL ATOMS in the block avg_pool_32s.div_32s_32s:	178 (8.00 % Utilization)
+
+
+COMBINATIONAL ATOMS
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+ATOMS                    423                55.4 %               
+COMB ARITHMETIC MODE     300                49.3 %               
+=================================================================
+Total COMBINATIONAL ATOMS in the block avg_pool_32s.div_32s_32s:	723 (32.51 % Utilization)
+
+----------------------------------------------------------------------------------
+########   Utilization report for  cell:   convolutional_layer_4s_8s_9s   ########
+Instance path:   network_components_8s_9s_4s.convolutional_layer_4s_8s_9s         
+==================================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     146                22.6 %               
+======================================================
+Total SEQUENTIAL ATOMS in the block network_components_8s_9s_4s.convolutional_layer_4s_8s_9s:	146 (6.56 % Utilization)
+
+
+COMBINATIONAL ATOMS
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+ATOMS                    176                23.1 %               
+COMB ARITHMETIC MODE     9                  1.48 %               
+=================================================================
+Total COMBINATIONAL ATOMS in the block network_components_8s_9s_4s.convolutional_layer_4s_8s_9s:	185 (8.32 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   conv_8s_9s_6   ########
+Instance path:   convolutional_layer_4s_8s_9s.conv_8s_9s_6        
+==================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     122                18.9 %               
+======================================================
+Total SEQUENTIAL ATOMS in the block convolutional_layer_4s_8s_9s.conv_8s_9s_6:	122 (5.49 % Utilization)
+
+
+COMBINATIONAL ATOMS
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+ATOMS                    58                 7.6 %                
+COMB ARITHMETIC MODE     9                  1.48 %               
+=================================================================
+Total COMBINATIONAL ATOMS in the block convolutional_layer_4s_8s_9s.conv_8s_9s_6:	67 (3.01 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   syn_mlab_2_0   ########
+Instance path:   conv_8s_9s_6.syn_mlab_2_0                        
+==================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     4                  0.6190 %             
+======================================================
+Total SEQUENTIAL ATOMS in the block conv_8s_9s_6.syn_mlab_2_0:	4 (0.18 % Utilization)
+
+------------------------------------------------------------------------------
+########   Utilization report for  cell:   window_8s_9s_451s_451s_3   ########
+Instance path:   conv_8s_9s_6.window_8s_9s_451s_451s_3                        
+==============================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     114                17.6 %               
+======================================================
+Total SEQUENTIAL ATOMS in the block conv_8s_9s_6.window_8s_9s_451s_451s_3:	114 (5.13 % Utilization)
+
+
+COMBINATIONAL ATOMS
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+ATOMS                    51                 6.68 %               
+COMB ARITHMETIC MODE     9                  1.48 %               
+=================================================================
+Total COMBINATIONAL ATOMS in the block conv_8s_9s_6.window_8s_9s_451s_451s_3:	60 (2.70 % Utilization)
+
+----------------------------------------------------------------
+########   Utilization report for  cell:   syn_mlab_2   ########
+Instance path:   window_8s_9s_451s_451s_3.syn_mlab_2            
+================================================================
+----------------------------------------------------------------
+########   Utilization report for  cell:   syn_mlab_6   ########
+Instance path:   window_8s_9s_451s_451s_3.syn_mlab_6            
+================================================================
+--------------------------------------------------------------------
+########   Utilization report for  cell:   conv_8s_9s_6_0   ########
+Instance path:   convolutional_layer_4s_8s_9s.conv_8s_9s_6_0        
+====================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     8                  1.24 %               
+======================================================
+Total SEQUENTIAL ATOMS in the block convolutional_layer_4s_8s_9s.conv_8s_9s_6_0:	8 (0.36 % Utilization)
+
+
+COMBINATIONAL ATOMS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+ATOMS     10                 1.31 %               
+==================================================
+Total COMBINATIONAL ATOMS in the block convolutional_layer_4s_8s_9s.conv_8s_9s_6_0:	10 (0.45 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   syn_mlab_2_1   ########
+Instance path:   conv_8s_9s_6_0.syn_mlab_2_1                      
+==================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     4                  0.6190 %             
+======================================================
+Total SEQUENTIAL ATOMS in the block conv_8s_9s_6_0.syn_mlab_2_1:	4 (0.18 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   conv_8s_9s_6_1   ########
+Instance path:   convolutional_layer_4s_8s_9s.conv_8s_9s_6_1        
+====================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     8                  1.24 %               
+======================================================
+Total SEQUENTIAL ATOMS in the block convolutional_layer_4s_8s_9s.conv_8s_9s_6_1:	8 (0.36 % Utilization)
+
+
+COMBINATIONAL ATOMS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+ATOMS     7                  0.9170 %             
+==================================================
+Total COMBINATIONAL ATOMS in the block convolutional_layer_4s_8s_9s.conv_8s_9s_6_1:	7 (0.31 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   syn_mlab_2_2   ########
+Instance path:   conv_8s_9s_6_1.syn_mlab_2_2                      
+==================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     4                  0.6190 %             
+======================================================
+Total SEQUENTIAL ATOMS in the block conv_8s_9s_6_1.syn_mlab_2_2:	4 (0.18 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   conv_8s_9s_6_2   ########
+Instance path:   convolutional_layer_4s_8s_9s.conv_8s_9s_6_2        
+====================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     8                  1.24 %               
+======================================================
+Total SEQUENTIAL ATOMS in the block convolutional_layer_4s_8s_9s.conv_8s_9s_6_2:	8 (0.36 % Utilization)
+
+
+COMBINATIONAL ATOMS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+ATOMS     101                13.2 %               
+==================================================
+Total COMBINATIONAL ATOMS in the block convolutional_layer_4s_8s_9s.conv_8s_9s_6_2:	101 (4.54 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   syn_mlab_2_3   ########
+Instance path:   conv_8s_9s_6_2.syn_mlab_2_3                      
+==================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     4                  0.6190 %             
+======================================================
+Total SEQUENTIAL ATOMS in the block conv_8s_9s_6_2.syn_mlab_2_3:	4 (0.18 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   fc_8s_1024s   ########
+Instance path:   network_components_8s_9s_4s.fc_8s_1024s         
+=================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     75                 11.6 %               
+======================================================
+Total SEQUENTIAL ATOMS in the block network_components_8s_9s_4s.fc_8s_1024s:	75 (3.37 % Utilization)
+
+
+COMBINATIONAL ATOMS
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+ATOMS                    49                 6.42 %               
+COMB ARITHMETIC MODE     96                 15.8 %               
+=================================================================
+Total COMBINATIONAL ATOMS in the block network_components_8s_9s_4s.fc_8s_1024s:	145 (6.52 % Utilization)
+
+
+DSPs
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+MACs     3                  100 %                
+=================================================
+Total DSPs in the block network_components_8s_9s_4s.fc_8s_1024s:	3 (0.13 % Utilization)
+
+-------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   resizer_24s_640s_480s_16s_96s_224s_464s_94s_542s_15s_Z1   ########
+Instance path:   processing_state_controller.resizer_24s_640s_480s_16s_96s_224s_464s_94s_542s_15s_Z1         
+=============================================================================================================
+
+SEQUENTIAL ATOMS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     24                 3.72 %               
+======================================================
+Total SEQUENTIAL ATOMS in the block processing_state_controller.resizer_24s_640s_480s_16s_96s_224s_464s_94s_542s_15s_Z1:	24 (1.08 % Utilization)
+
+
+COMBINATIONAL ATOMS
+Name                     Total elements     Utilization     Notes
+-----------------------------------------------------------------
+ATOMS                    42                 5.5 %                
+COMB ARITHMETIC MODE     11                 1.81 %               
+=================================================================
+Total COMBINATIONAL ATOMS in the block processing_state_controller.resizer_24s_640s_480s_16s_96s_224s_464s_94s_542s_15s_Z1:	53 (2.38 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

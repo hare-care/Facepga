@@ -1,0 +1,10 @@
+
+fsm_encoding {10790791} sequential
+
+fsm_state_encoding {10790791} load_data {00}
+
+fsm_state_encoding {10790791} calculating {01}
+
+fsm_state_encoding {10790791} done {10}
+
+fsm_registers {10790791} {state_s[1]}  {state_s[0]} 

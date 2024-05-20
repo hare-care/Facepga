@@ -1,0 +1,11 @@
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: FA350 |Clearbox flow is not supported when QUARTUS_ROOTDIR is not set
+@N: FA351 |Clearbox flow is not supported because clearbox does not exist
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: BN225 |Writing default property annotation file /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/rev_1/processing_state_controller.sap.
+@N: MO225 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv":118:0:118:8|There are no possible illegal states for state machine state_s[3:0] (in view: work.resizer(verilog)); safe FSM implementation is not required.

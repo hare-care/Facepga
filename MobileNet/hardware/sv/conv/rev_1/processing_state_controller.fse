@@ -1,0 +1,12 @@
+
+fsm_encoding {2011801181} sequential
+
+fsm_state_encoding {2011801181} idle {00}
+
+fsm_state_encoding {2011801181} crop {01}
+
+fsm_state_encoding {2011801181} resize {10}
+
+fsm_state_encoding {2011801181} done {11}
+
+fsm_registers {2011801181} {state_s[1]}  {state_s[0]} 

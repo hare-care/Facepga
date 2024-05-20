@@ -31,7 +31,7 @@ resizerState state_c, state_s;
 logic cropCounter_c, cropCounter_s; //Get 2x2 before outputting data
 logic [10:0] rowCounter_c, rowCounter_s;
 logic [10:0] colCounter_c, colCounter_s;
-logic [OUT_DIM-1:0][10:0] rTotal_c, rTotal_s , bTotal_c, bTotal_s , gTotal_c, gTotal_s; //8 + 3 bits
+logic [OUT_DIM-1:0][9:0] rTotal_c, rTotal_s , bTotal_c, bTotal_s , gTotal_c, gTotal_s; //8 + 3 bits
 
 always_comb begin
     state_c = state_s;

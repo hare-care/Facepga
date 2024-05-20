@@ -1,0 +1,13 @@
+@P:  Part : 5cgxfc7c6fc23-6
+@P:  Worst Slack : -0.377
+@P:  resizer|clock - Estimated Frequency : 398.2 MHz
+@P:  resizer|clock - Requested Frequency : 468.4 MHz
+@P:  resizer|clock - Estimated Period : 2.511
+@P:  resizer|clock - Requested Period : 2.135
+@P:  resizer|clock - Slack : -0.377
+@P: resizer Part : 5cgxfc7c6fc23-6
+@P: resizer I/O ATOMs : 13
+@P: resizer Total LUTs : 56 
+@P: resizer Register bits : 25
+@P: resizer Packed ALMs : 34
+@P:  CPU Time : 0h:00m:00s

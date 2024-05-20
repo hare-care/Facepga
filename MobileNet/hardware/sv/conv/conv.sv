@@ -7,8 +7,9 @@ module conv #(
     input logic                         clock,
     input logic                         reset,
 
-    input logic [0:8][7:0]              weights,
-    input logic [0:8][7:0]              biases,
+    input logic                         weights_valid,
+    input logic                         bias_valid,
+
     input logic                         stride,
     input logic [7:0]                   newPixelData,
 
@@ -22,7 +23,7 @@ module conv #(
     output logic                        idle_out
 );
 
-typedef enum logic[3:0] {idle, multiply, done} conv_state;
+typedef enum logic[3:0] {load_data, multiply, done} conv_state;
 
 conv_state state_s, state_c;
 logic [8:0][DATA_WIDTH-1:0] window_c, window_s, window_out;
@@ -32,6 +33,9 @@ logic [31:0] result_c;
 logic [3:0] loopVar, multTotal;
 logic [MULT_PER_CYCLE-1:0][31:0] Mac_SubOps;
 logic allow_write_data;
+
+logic [8:0][DATA_WIDTH-1:0] weights_c, weights_s, biases_c, biases_s;
+logic [3:0] loadCounter_s, loadCounter_c;
 
 window #(
     .DATA_WIDTH(8),
@@ -61,9 +65,32 @@ always_comb begin
     idle_out = 0;
     loopVar = 0;
     Mac_SubOps = 0;
+    weights_c = weights_s;
+    biases_c = biases_s;
+    loadCounter_c = loadCounter_s;
+
     case (state_s)
-    idle: begin
-        if (window_valid == 1'b1) begin
+    load_data: begin
+        //If loading weights, store and inc counter, reset if saturated
+        if (weights_valid == 1) begin
+            weights_c[loadCounter_s] = newPixelData;
+            if (window_dim == 3) begin
+                if (loadCounter_s < 8) begin
+                    loadCounter_c =loadCounter_s + 1;
+                end else begin
+                    loadCounter_c = 0;
+                end
+            end
+        end else if (bias_valid == 1) begin
+            biases_c[loadCounter_s] = newPixelData;
+            if (window_dim == 3) begin
+                if (loadCounter_s < 8) begin
+                    loadCounter_c =loadCounter_s + 1;
+                end else begin
+                    loadCounter_c = 0;
+                end
+            end
+        end else if (window_valid == 1) begin
             window_c = window_out;
             state_c = multiply;
         end
@@ -75,7 +102,7 @@ always_comb begin
     multiply: begin
         for (loopVar = 0; loopVar < MULT_PER_CYCLE; loopVar += 1) begin
            if (multiply_count_s + loopVar < multTotal) begin
-              Mac_SubOps[loopVar] = (window_s[loopVar + multiply_count_s] * 32'(signed'(weights[loopVar + multiply_count_s]))) + 32'(signed'(biases[loopVar + multiply_count_s]));
+              Mac_SubOps[loopVar] = (window_s[loopVar + multiply_count_s] * 32'(signed'(weights_s[loopVar + multiply_count_s]))) + 32'(signed'(biases_s[loopVar + multiply_count_s]));
            end else begin
               Mac_SubOps[loopVar] = 0;
            end
@@ -91,33 +118,37 @@ always_comb begin
 
     done: begin
         if (out_accepting_values == 1) begin 
-            state_c = idle;
+            state_c = load_data;
             resultValid = 1;
         end
         multiply_count_c = 0;
     end
 
     default: begin
-        state_c = idle;
+        state_c = load_data;
     end
 
     endcase
 end
 
 always_ff @( posedge clock, posedge reset ) begin
-
     if (reset == 1'b1) begin
-        state_s <= idle;
+        state_s <= load_data;
         window_s <= 0;
         multiply_count_s <= 0;
         result <= 0;
+        weights_s <= 0;
+        biases_s <= 0;
+        loadCounter_s <= 0;
     end else begin
         state_s <= state_c;
         window_s <= window_c;
         multiply_count_s <= multiply_count_c;
         result <= result_c;
+        weights_s <= weights_c;
+        biases_s <= biases_c;
+        loadCounter_s <= loadCounter_c;
     end
-    
 end
 
 endmodule

@@ -10,111 +10,62 @@ z2
 cModel Technology
 Z0 d/home/ted4152/Spring24/Facepga/MobileNet/hardware/sim/other_layers
 T_opt
-Z1 !s110 1714673474
-Vg<bXoEVJ4HRYbjmSzL<[z1
-04 11 4 work avg_pool_tb fast 0
-=1-a4bb6d3fef1e-6633d742-8593e-24c28
+!s110 1715779896
+ViWDcAPm14WX[Wg0c4oljo1
+04 5 4 work fc_tb fast 0
+=1-a4bb6d3edc7d-6644b938-dc789-1327
 o-quiet -auto_acc_if_foreign -work work -L work +acc
-Z2 tCvgOpt 0
+Z1 tCvgOpt 0
 n@_opt
 OL;O;2020.1;71
-vavg_pool
-Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R1
+R0
+vfc
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1715779945
 !i10b 1
-!s100 O1BKWEYN`XNCEi6M[J6P<3
+!s100 Q0H7Lb@4c[MihVI`ifaU:3
 Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IC=[D9GfQjbGFkFPa8lO3b3
+IzmfbE74z4>a8OS7;n1giS1
 Z5 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1714420143
-8../../sv/other_layers/avg_pool/avg_pool.sv
-F../../sv/other_layers/avg_pool/avg_pool.sv
-!i122 4
-L0 3 85
+w1715779889
+8../../sv/other_layers/fc.sv
+F../../sv/other_layers/fc.sv
+!i122 13
+L0 3 100
 Z6 OL;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1714673474.000000
-!s107 ../../sv/other_layers/avg_pool/avg_pool.sv|
-!s90 -reportprogress|300|-work|work|../../sv/other_layers/avg_pool/avg_pool.sv|
+Z7 !s108 1715779945.000000
+!s107 ../../sv/other_layers/fc.sv|
+!s90 -reportprogress|300|-work|work|../../sv/other_layers/fc.sv|
 !i113 0
 Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
-vavg_pool_tb
-R3
 R1
+vfc_tb
+R2
+R3
 !i10b 1
-!s100 4PkPT?dimF1_;h=Ezl6[c1
+!s100 zCXch_a:J:cF5Sc3ikBiR2
 R4
-Im<o7LC:99>fT@mI41LBTk2
+IoIOA;dZ69d]22:ccSihV31
 R5
 S1
 R0
-w1714420149
-8../../sv/other_layers/avg_pool/avg_pool_tb.sv
-F../../sv/other_layers/avg_pool/avg_pool_tb.sv
-!i122 5
-L0 3 32
+w1715779818
+8../../sv/other_layers/fc_tb.sv
+F../../sv/other_layers/fc_tb.sv
+!i122 14
+L0 3 63
 R6
 r1
 !s85 0
 31
 R7
-!s107 ../../sv/other_layers/avg_pool/avg_pool_tb.sv|
-!s90 -reportprogress|300|-work|work|../../sv/other_layers/avg_pool/avg_pool_tb.sv|
+!s107 ../../sv/other_layers/fc_tb.sv|
+!s90 -reportprogress|300|-work|work|../../sv/other_layers/fc_tb.sv|
 !i113 0
 R8
-R2
-vdiv
-R3
 R1
-!i10b 1
-!s100 bdHBI?6YCB?A2T?`_Fn501
-R4
-Im:bR0hc3ZaD3nlfzTk2f`1
-R5
-S1
-R0
-w1714673125
-8../../sv/other_layers/avg_pool/div_synth.sv
-F../../sv/other_layers/avg_pool/div_synth.sv
-!i122 3
-L0 28 141
-R6
-r1
-!s85 0
-31
-R7
-!s107 ../../sv/other_layers/avg_pool/div_synth.sv|
-!s90 -reportprogress|300|-work|work|../../sv/other_layers/avg_pool/div_synth.sv|
-!i113 0
-R8
-R2
-Xdiv_sv_unit
-R3
-!s110 1714673404
-VF5_6Q;D4L`n3S2X2;__Rh0
-r1
-!s85 0
-!i10b 1
-!s100 jS<3`mC?dDdfRLfggY???2
-IF5_6Q;D4L`n3S2X2;__Rh0
-!i103 1
-S1
-R0
-w1714404820
-8../../sv/other_layers/avg_pool/div.sv
-F../../sv/other_layers/avg_pool/div.sv
-!i122 0
-L0 1 0
-R6
-31
-!s108 1714673404.000000
-!s107 ../../sv/other_layers/avg_pool/div.sv|
-!s90 -reportprogress|300|-work|work|../../sv/other_layers/avg_pool/div.sv|
-!i113 0
-R8
-R2

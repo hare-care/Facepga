@@ -1,3 +1,0 @@
-@W: FA406 |Environment variable QUARTUS_ROOTDIR not set. Cannot determine PAR version.
-@W: MO129 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":85:4:85:7|Sequential instance divider.overflow is reduced to a combinational gate by constant propagation.
-@W: MT529 :"/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/avg_pool/div_synth.sv":60:0:60:8|Found inferred clock avg_pool|clock which controls 207 sequential elements including divider.msb_a[31:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

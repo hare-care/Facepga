@@ -1,0 +1,63 @@
+fsm_options -device {state_s[10:0]}
+
+define_state idle 00000 {/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/processing_state_controller.sv} 159 4 159 7
+state_output idle {state_s[0]} 1
+
+define_state resize 00001 {/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/processing_state_controller.sv} 165 4 165 9
+state_output resize {state_s[1]} 1
+
+define_state conv1 00010 {/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/processing_state_controller.sv} 177 4 177 8
+state_output conv1 {state_s[2]} 1
+
+define_state conv2 00011 {/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/processing_state_controller.sv} 196 4 196 8
+state_output conv2 {state_s[3]} 1
+
+define_state conv5 00110 {/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/processing_state_controller.sv} 221 4 221 8
+state_output conv5 {state_s[4]} 1
+
+define_state conv9 01010 {/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/processing_state_controller.sv} 249 4 249 8
+state_output conv9 {state_s[5]} 1
+
+define_state conv13 01110 {/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/processing_state_controller.sv} 277 4 277 9
+state_output conv13 {state_s[6]} 1
+
+define_state conv17 10010 {/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/processing_state_controller.sv} 305 4 305 9
+state_output conv17 {state_s[7]} 1
+
+define_state avgPool 11000 {/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/processing_state_controller.sv} 339 4 339 10
+state_output avgPool {state_s[8]} 1
+
+define_state fullyConnected 11001 {/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/processing_state_controller.sv} 346 4 346 17
+state_output fullyConnected {state_s[9]} 1
+
+define_state outputResizer 11010 {/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/top/processing_state_controller.sv} 355 4 355 16
+state_output outputResizer {state_s[10]} 1
+
+fsm_options -resetState idle
+
+define_transition fullyConnected outputResizer {network_done,resizer_end_of_image,Begin_Calc = 1--}
+define_transition fullyConnected fullyConnected {network_done,resizer_end_of_image,Begin_Calc = 0--}
+define_transition avgPool fullyConnected {network_done,resizer_end_of_image,Begin_Calc = 1--}
+define_transition avgPool avgPool {network_done,resizer_end_of_image,Begin_Calc = 0--}
+define_transition conv17 avgPool {network_done,resizer_end_of_image,Begin_Calc = 1--}
+define_transition conv17 conv17 {network_done,resizer_end_of_image,Begin_Calc = 0--}
+define_transition conv13 conv17 {network_done,resizer_end_of_image,Begin_Calc = 1--}
+define_transition conv13 conv13 {network_done,resizer_end_of_image,Begin_Calc = 0--}
+define_transition conv9 conv13 {network_done,resizer_end_of_image,Begin_Calc = 1--}
+define_transition conv9 conv9 {network_done,resizer_end_of_image,Begin_Calc = 0--}
+define_transition conv5 conv9 {network_done,resizer_end_of_image,Begin_Calc = 1--}
+define_transition conv5 conv5 {network_done,resizer_end_of_image,Begin_Calc = 0--}
+define_transition conv2 conv5 {network_done,resizer_end_of_image,Begin_Calc = 1--}
+define_transition conv2 conv2 {network_done,resizer_end_of_image,Begin_Calc = 0--}
+define_transition conv1 conv2 {network_done,resizer_end_of_image,Begin_Calc = 1--}
+define_transition conv1 conv1 {network_done,resizer_end_of_image,Begin_Calc = 0--}
+define_transition resize conv1 {network_done,resizer_end_of_image,Begin_Calc = -1-}
+define_transition resize resize {network_done,resizer_end_of_image,Begin_Calc = -0-}
+define_transition idle resize {network_done,resizer_end_of_image,Begin_Calc = --1}
+define_transition outputResizer idle {network_done,resizer_end_of_image,Begin_Calc = ---}
+define_transition idle idle {network_done,resizer_end_of_image,Begin_Calc = --0}
+fsm_options -SRSPath {/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/rev_1/synwork/processing_state_controller_mult.srs}
+fsm_options -SRSTime 1716220302
+fsm_options -FSMPath {state_s[10:0]}
+fsm_options -view {work.processing_state_controller.verilog|i:state_s[10:0]}
+fsm_options -ID {2336803681}

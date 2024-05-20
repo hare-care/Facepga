@@ -1,0 +1,173 @@
+<html><body><samp><pre>
+<!@TC:1716221552>
+# Mon May 20 11:12:30 2024
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: O-2018.09-SP1
+Install: /vol/synopsys/fpga/O-2018.09-SP1
+OS: Red Hat Enterprise Linux 8.9 (Ootpa)
+Hostname: joker.ece.northwestern.edu
+max virtual memory: unlimited (bytes)
+max user processes: 126575
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+<a name=mapperReport215></a>Synopsys Intel FPGA Technology Pre-mapping, Version maprc, Build 4745R, Built Nov 27 2018 21:14:52</a>
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
+
+@A:<a href="@A:MF827:@XP_HELP">MF827</a> : <!@TM:1716221552> | No constraint file specified. 
+@N:<a href="@N:MF284:@XP_HELP">MF284</a> : <!@TM:1716221552> | Setting synthesis effort to medium for the design 
+Linked File:  <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/rev_1/processing_state_controller_scck.rpt:@XP_FILE">processing_state_controller_scck.rpt</a>
+Printing clock  summary report in "/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/rev_1/processing_state_controller_scck.rpt" file 
+@N:<a href="@N:MF916:@XP_HELP">MF916</a> : <!@TM:1716221552> | Option synthesis_strategy=base is enabled.  
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1716221552> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1716221552> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 104MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 104MB)
+
+<font color=#A52A2A>@W:<a href="@W:FA406:@XP_HELP">FA406</a> : <!@TM:1716221552> | Environment variable QUARTUS_ROOTDIR not set. Cannot determine PAR version.</font> 
+@N:<a href="@N:FA350:@XP_HELP">FA350</a> : <!@TM:1716221552> | Clearbox flow is not supported when QUARTUS_ROOTDIR is not set 
+@N:<a href="@N:FA351:@XP_HELP">FA351</a> : <!@TM:1716221552> | Clearbox flow is not supported because clearbox does not exist 
+<font color=#A52A2A>@W:<a href="@W:FA352:@XP_HELP">FA352</a> : <!@TM:1716221552> | Not using the Clearbox flow might affect timing correlation and Quality of Results (QoR).</font> 
+@N:<a href="@N:MF284:@XP_HELP">MF284</a> : <!@TM:1716221552> | Setting synthesis effort to medium for the design 
+
+Finished Clear Box Flow. (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 126MB)
+
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s6[16][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s5[30][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s5[30][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s4[58][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s3[114][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s4[58][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s2[226][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s4[58][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s1[450][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s4[58][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s2[225][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s1[449][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s3[113][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s1[449][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s6[15][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s1[449][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s5[29][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s1[449][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s4[57][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s1[449][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s5[28][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s4[56][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s6[14][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s4[56][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s3[112][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s4[56][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s2[224][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s4[56][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:BN132:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Removing sequential instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s1[448][7:0] because it is equivalent to instance mobilenet.conv_layer.genblk1[3].convolutional_layer.window_inst.shift_buffer_s4[56][7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+@N:<a href="@N:MH105:@XP_HELP">MH105</a> : <!@TM:1716221552> | UMR3 is only supported for HAPS-80. 
+@N:<a href="@N:MH105:@XP_HELP">MH105</a> : <!@TM:1716221552> | UMR3 is only supported for HAPS-80. 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 148MB peak: 150MB)
+
+
+
+<a name=mapperReport216></a>Clock Summary</a>
+******************
+
+          Start                                 Requested     Requested     Clock        Clock                     Clock
+Level     Clock                                 Frequency     Period        Type         Group                     Load 
+------------------------------------------------------------------------------------------------------------------------
+0 -       processing_state_controller|clock     138.5 MHz     7.222         inferred     Autoconstr_clkgroup_0     2973 
+========================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                      Clock     Source          Clock Pin           Non-clock Pin     Non-clock Pin
+Clock                                 Load      Pin             Seq Example         Seq Example       Comb Example 
+-------------------------------------------------------------------------------------------------------------------
+processing_state_controller|clock     2973      clock(port)     state_s[10:0].C     -                 -            
+===================================================================================================================
+
+<font color=#A52A2A>@W:<a href="@W:MT529:@XP_HELP">MT529</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/window.sv:136:4:136:13:@W:MT529:@XP_MSG">window.sv(136)</a><!@TM:1716221552> | Found inferred clock processing_state_controller|clock which controls 2973 sequential elements including mobilenet.conv_layer.genblk1\[0\]\.convolutional_layer.window_inst.rowCounter_s[31:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </font>
+
+Finished Pre Mapping Phase.
+@N:<a href="@N:BN225:@XP_HELP">BN225</a> : <!@TM:1716221552> | Writing default property annotation file /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/rev_1/processing_state_controller.sap. 
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 150MB)
+
+Encoding state machine state_s[2:0] (in view: work.conv_8s_9s_3(verilog))
+original code -> new code
+   0000 -> 00
+   0001 -> 01
+   0010 -> 10
+Encoding state machine state_s[2:0] (in view: work.conv_8s_9s_2(verilog))
+original code -> new code
+   0000 -> 00
+   0001 -> 01
+   0010 -> 10
+Encoding state machine state_s[2:0] (in view: work.conv_8s_9s_1(verilog))
+original code -> new code
+   0000 -> 00
+   0001 -> 01
+   0010 -> 10
+Encoding state machine state_s[2:0] (in view: work.conv_8s_9s_0(verilog))
+original code -> new code
+   0000 -> 00
+   0001 -> 01
+   0010 -> 10
+Encoding state machine state[6:0] (in view: work.div_32s_32s(verilog))
+original code -> new code
+   000 -> 0000001
+   001 -> 0000010
+   010 -> 0000100
+   011 -> 0001000
+   100 -> 0010000
+   101 -> 0100000
+   110 -> 1000000
+Encoding state machine state_s[2:0] (in view: work.avg_pool_32s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state_s[2:0] (in view: work.fc_8s_1024s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state_s[3:0] (in view: work.resizer_24s_640s_480s_16s_96s_224s_464s_94s_542s_15s_Z1(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N:<a href="@N:MO225:@XP_HELP">MO225</a> : <a href="/home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/other_layers/resizer.sv:118:0:118:9:@N:MO225:@XP_MSG">resizer.sv(118)</a><!@TM:1716221552> | There are no possible illegal states for state machine state_s[3:0] (in view: work.resizer_24s_640s_480s_16s_96s_224s_464s_94s_542s_15s_Z1(verilog)); safe FSM implementation is not required.
+Encoding state machine state_s[10:0] (in view: work.processing_state_controller(verilog))
+original code -> new code
+   00000 -> 00000000001
+   00001 -> 00000000010
+   00010 -> 00000000100
+   00011 -> 00000001000
+   00110 -> 00000010000
+   01010 -> 00000100000
+   01110 -> 00001000000
+   10010 -> 00010000000
+   11000 -> 00100000000
+   11001 -> 01000000000
+   11010 -> 10000000000
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 164MB peak: 168MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 170MB peak: 180MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 83MB peak: 180MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Mon May 20 11:12:32 2024
+
+###########################################################]
+
+</pre></samp></body></html>
