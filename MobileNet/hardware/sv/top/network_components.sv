@@ -2,7 +2,7 @@
 
 module network_components #(
     DATA_WIDTH = 8,
-    CNN_UNROLL_FACTOR = 3,
+    CNN_UNROLL_FACTOR = 9,
     CNN_COUNT = 4
 )(
     //GLOBALS
@@ -18,7 +18,9 @@ module network_components #(
 
     output logic [31:0]                                     Result,
     output logic                                            Computing,
+    output logic                                            ResultValid,
     output logic                                            Done,
+    output logic                                            InputEnable,
     //CNN
     input logic                                             CNN_Stride,
     input logic [1:0]                                       CNN_Window_Dim,
@@ -28,9 +30,7 @@ module network_components #(
 
 
 
-logic [CNN_COUNT-1:0][31:0]                         conv_output;
-
-logic CNN_Result_Valid, CNN_Idle;
+logic CNN_Result_Valid, CNN_Idle, CNN_done;
 logic [31:0] CNN_Result;
 
 convolutional_layer #(
@@ -50,10 +50,11 @@ convolutional_layer #(
     .bias_valid(DDR3_biases),
     .result(CNN_Result),
     .outputs_valid(CNN_Result_Valid),
-    .idle(CNN_Idle)
+    .idle(CNN_Idle),
+    .imagesDone(CNN_done)
 );
 
-logic AVP_Done;
+logic AVP_Done, AVP_InputEnable;
 logic [31:0]AVP_Result;
 
 avg_pool #(
@@ -64,7 +65,8 @@ avg_pool #(
     .newPointData(DDR3_Input),
     .newPointValid(DDR3_operands),
     .done(AVP_Done),
-    .average(AVP_Result)
+    .average(AVP_Result),
+    .inputEnable(AVP_InputEnable)
 );
 
 logic fc_Computing;
@@ -91,15 +93,24 @@ always_comb begin
     Computing = 0;
     Result = AVP_Result;
     Done = AVP_Done;
+    InputEnable = 0;
+    ResultValid = 0;
     if (Layer == 0) begin
         Result = CNN_Result;
-        Done = CNN_Result_Valid;
+        Done = CNN_done;
+        ResultValid = CNN_Result_Valid;
+        InputEnable = CNN_Idle;
     end else if (Layer == 1) begin
         Result = fc_result;
         Done = fc_done;
         Computing = 1;
-    end 
-
+        ResultValid = fc_done;
+        InputEnable = !fc_Computing;
+    end else if (Layer == 2) begin
+        InputEnable = AVP_InputEnable;
+        ResultValid = AVP_Done;
+        Done = AVP_Done;
+    end
 end
 
 

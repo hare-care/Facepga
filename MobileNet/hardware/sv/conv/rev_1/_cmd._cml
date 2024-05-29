@@ -1,1 +1,0 @@
--link -encrypt -top resizer -osyn /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/rev_1/synwork/processing_state_controller_comp.srs /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/rev_1/synwork/layer0.srs  -jobname linker  

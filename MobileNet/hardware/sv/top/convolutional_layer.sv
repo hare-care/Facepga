@@ -18,7 +18,8 @@ module convolutional_layer #(
 
     output logic [CNN_UNROLL_FACTOR-1:0][CNN_DATA_WIDTH-1:0]result,
     output logic                                            outputs_valid,
-    output logic                                            idle
+    output logic                                            idle,
+    output logic                                            imagesDone
 );
 
     genvar cnn_count;
@@ -26,7 +27,7 @@ module convolutional_layer #(
     logic [CNN_UNROLL_FACTOR-1:0] outValidArray;
     logic [CNN_UNROLL_FACTOR-1:0] idleArray;
     logic [CNN_UNROLL_FACTOR-1:0][31:0] resArray;
-
+    logic [CNN_UNROLL_FACTOR-1:0] imageDone;
     generate
     for(cnn_count = 0; cnn_count < CNN_UNROLL_FACTOR; cnn_count ++)begin
         conv #(
@@ -45,14 +46,16 @@ module convolutional_layer #(
             .new_data_valid(input_valid),
             .result(resArray[cnn_count]),
             .resultValid(outValidArray[cnn_count]),
-            .idle_out(idleArray[cnn_count])
+            .idle_out(idleArray[cnn_count]),
+            .imageDone(imageDone[cnn_count])
         );
         assign result[cnn_count] = resArray[cnn_count][7:0];
         end
     endgenerate
 
     assign outputs_valid = &outValidArray;
-    assign idle = &idleArray;
+    assign idle = |idleArray;
+    assign imagesDone = |imageDone;
 
 
 endmodule

@@ -1,1 +1,0 @@
--link -encrypt -top NoName -osyn /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/rev_2/synwork/convolutional_layer_comp.srs /home/ted4152/Spring24/Facepga/MobileNet/hardware/sv/conv/rev_2/synwork/layer0.srs  -jobname linker  

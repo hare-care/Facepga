@@ -37,21 +37,20 @@ module conv_tb_img();
     logic [7:0] newPixelData;
     logic [1:0] window_dim;
     logic [7:0] input_dim;
-
-    assign weights = '{1,2,1,0,0,0,-1,-2,-1};
-    assign biases = '{0,0,0,0,0,0,0,0,0};
+    logic weights_valid, bias_valid;
+    logic imageDone;
     assign stride = 0;
     assign input_dim = 224;
     assign window_dim = 3;
     assign out_accepting_values = 1;
     conv #(
         .DATA_WIDTH(8),
-        .MULT_PER_CYCLE(3)
+        .MULT_PER_CYCLE(9)
     )top_inst(
         .clock(clock),
         .reset(reset),
-        .weights(weights),
-        .biases(biases),
+        .weights_valid(weights_valid),
+        .bias_valid(bias_valid),
         .stride(stride),
         .newPixelData(newPixelData),
         .out_accepting_values(out_accepting_values),
@@ -60,7 +59,8 @@ module conv_tb_img();
         .result(result),
         .resultValid(resultValid),
         .idle_out(idle),
-        .new_data_valid(new_data_valid)
+        .new_data_valid(new_data_valid),
+        .imageDone(imageDone)
     );
 
     always begin
@@ -113,12 +113,68 @@ module conv_tb_img();
 
         // Skip BMP header
         r = $fread(bmp_header, in_file, 0, BMP_HEADER_SIZE);
+        @(negedge clock);
+        weights_valid = 1;
+        newPixelData = 1;
+        @(negedge clock);
+        weights_valid = 1;
+        newPixelData = 2;
+        @(negedge clock);
+        weights_valid = 1;
+        newPixelData = 1;
+        @(negedge clock);
+        weights_valid = 1;
+        newPixelData = 0;
+         @(negedge clock);
+        weights_valid = 1;
+        newPixelData = 0;
+         @(negedge clock);
+        weights_valid = 1;
+        newPixelData = 0;
+         @(negedge clock);
+        weights_valid = 1;
+        newPixelData = -1;
+         @(negedge clock);
+        weights_valid = 1;
+        newPixelData = -2;
+         @(negedge clock);
+        weights_valid = 1;
+        newPixelData = -1;
+         @(negedge clock);
+         weights_valid = 0;
+        bias_valid = 1;
+        newPixelData = 0;
+         @(negedge clock);
+        bias_valid = 1;
+        newPixelData = 0;
+         @(negedge clock);
+        bias_valid = 1;
+        newPixelData = 0;
+         @(negedge clock);
+        bias_valid = 1;
+        newPixelData = 0;
+         @(negedge clock);
+        bias_valid = 1;
+        newPixelData = 0;
+         @(negedge clock);
+        bias_valid = 1;
+        newPixelData = 0;
+         @(negedge clock);
+        bias_valid = 1;
+        newPixelData = 0;
+         @(negedge clock);
+        bias_valid = 1;
+        newPixelData = 0;
+         @(negedge clock);
+        bias_valid = 1;
+        newPixelData = 0;
 
         // Read data from image file
         i = 0;
         cnt = 0;
         while ( i < BMP_DATA_SIZE ) begin
             @(negedge clock);
+            bias_valid = 0;
             new_data_valid = 1'b0;
             if (idle == 1'b1) begin
                 cnt ++;
@@ -160,15 +216,11 @@ module conv_tb_img();
             $fwrite(out_file, "%c", bmp_header[i]);
         end
 
-        for (i = 0; i < IM_WIDTH + 1; i += 1)begin
-             $fwrite(out_file, "%c%c%c", 0, 0, 255);
-            r = $fread(cmp_dout, cmp_file, BMP_HEADER_SIZE+i, IM_WIDTH);
-        end //Padding top 
         
         j = IM_WIDTH + 1;
         i = 0; 
         ct = 0;
-        while (ct < 49283) begin
+        while (imageDone == 0) begin
             @(negedge clock);
             out_rd_en = 1'b0;
            
@@ -187,22 +239,8 @@ module conv_tb_img();
                 i += BYTES_PER_PIXEL;
                 j ++;
             end
-             if (j % IM_WIDTH == 0 || j % IM_WIDTH == IM_WIDTH - 1) begin
-                $fwrite(out_file, "%c%c%c", 0, 0, 255);
-                r = $fread(cmp_dout, cmp_file, BMP_HEADER_SIZE+i, BYTES_PER_PIXEL);
-                j++;
-              //  $write("EDGE AT: %d -- %d\n", ct,j);
-            end
-            
-            
         end
         $write("%d elements written\n",j);
-        for (i = 0; i < IM_WIDTH ; i ++)begin
-            $fwrite(out_file, "%c%c%c", 0, 0, 255);
-            //if (i == 112) $finish;
-            //$write("RUNNING\n");
-        end //Padding bottom
-
         @(negedge clock);
         out_rd_en = 1'b0;
         $fclose(out_file);

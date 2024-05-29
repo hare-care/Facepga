@@ -4,11 +4,15 @@ module processing_state_controller(
     input logic clock,
     input logic reset,
     input logic [31:0]                  DDR3_Input,
+    input logic                         DDR3_Input_Valid,
     input logic                         Begin_Calc,
 
     output logic [31:0]                 DDR3_Address,
-    output logic [31:0]                 Network_Result,
-    output logic                        Network_Output_Valid
+    output logic [31:0]                 Processor_Result,
+    output logic                        Network_Output_Valid,
+    output logic                        Proc_Done,
+    output logic                        DDR3_WE,
+    output logic                        Input_Enable
 );
 
 
@@ -58,7 +62,8 @@ logic network_done;
 logic CNN_Stride;
 logic [1:0]CNN_Window_Dim;
 logic [7:0]CNN_Input_Dim;
-logic Start;
+logic Start, Network_Input_Enable, networkResultValid;
+logic [31:0]Network_Result;
 
 network_components #(
     .DATA_WIDTH(8),
@@ -79,7 +84,9 @@ network_components #(
     .CNN_Stride(CNN_Stride),
     .CNN_Window_Dim(CNN_Window_Dim),
     .CNN_Input_Dim(CNN_Input_Dim),
-    .Start(Start)
+    .Start(Start),
+    .InputEnable(Network_Input_Enable),
+    .ResultValid(networkResultValid)
 );
 
 logic [23:0] resizer_pixel_data;
@@ -140,12 +147,16 @@ typedef enum logic [4:0] {
 network_state state_c, state_s;
 
 always_comb begin
+    Proc_Done = 0;
     resizer_pixel_data = 0;
     resizer_pixel_valid = 0;
     resizer_start_of_image = 0;
     DDR3_Address = 0;  
     network_reset = 0;
-    cycle_counter_c = cycle_counter_s + 1;
+    cycle_counter_c = cycle_counter_s;
+    if (DDR3_Input_Valid == 1) begin
+        cycle_counter_c = cycle_counter_s  + 1;
+    end
     DDR3_loaded_biases = 0;
     DDR3_loaded_operands = 0;
     DDR3_loaded_weights = 0;
@@ -154,17 +165,26 @@ always_comb begin
     CNN_Window_Dim = 0;
     Start = 0;
     Layer = 0;
+    Processor_Result = Network_Result;
     state_c = state_s;
+    Input_Enable = Network_Input_Enable;
+    Network_Output_Valid = networkResultValid;
+    network_output_enable = 1;
     case(state_s)//Bigass switch case™
     idle: begin
         if (Begin_Calc == 1) begin
-            state_c = resize;
+            state_c = conv1;
             cycle_counter_c = 0;
         end
     end
     resize: begin
+        Input_Enable = 1; //Resizer has 0 cycle compute time -- never will bottleneck
         resizer_pixel_data = DDR3_Input[23:0];
         resizer_pixel_valid = 1;
+        if (resizer_output_valid == 1)begin
+            Processor_Result = {8'b0,resizer_Red,resizer_Blue,resizer_Green};
+            Network_Output_Valid = 1;
+        end
         if (cycle_counter_s == 0) begin
             resizer_start_of_image = 1;
         end
@@ -177,46 +197,97 @@ always_comb begin
     conv1: begin
         DDR3_Address = C1_DREAD_ADDR_START + ((cycle_counter_s - 18) * 4);
         DDR3_loaded_operands = 1;
-        CNN_Stride = 1;
+        CNN_Stride = 0;
         CNN_Input_Dim = 224;
         CNN_Window_Dim = 3;
         if (network_done == 1) begin
             state_c = conv2;
-            network_reset = 1;
             cycle_counter_c = 0;
         end
-        if (cycle_counter_s < 9) begin
+        if (cycle_counter_s < 9 ) begin
+            DDR3_loaded_operands = 0;
             DDR3_Address = C1_WREAD_ADDR_START + (cycle_counter_s * 4);
             DDR3_loaded_weights = 1;
         end else if (cycle_counter_s < 18) begin
+            DDR3_loaded_operands = 0;
             DDR3_Address = C1_BREAD_ADDR_START + ((cycle_counter_s - 9) * 4);
             DDR3_loaded_biases = 1;
         end
     end
     conv2: begin
-        DDR3_Address = C2_DREAD_ADDR_START + ((cycle_counter_s - 18) * 4);
+        if (cycle_counter_s == 0) begin
+            network_reset = 1;
+            cycle_counter_c = 1;
+        end
+        DDR3_Address = C2_DREAD_ADDR_START + ((cycle_counter_s - 19) * 4);
         DDR3_loaded_operands = 1;
         CNN_Stride = 0;
-        CNN_Input_Dim = 112;
-        CNN_Window_Dim = 1;
+        CNN_Input_Dim = 224;
+        CNN_Window_Dim = 3;
         if (network_done == 1) begin
-            state_c = conv5;
-            network_reset = 1;
+            state_c = conv3;
+            DDR3_loaded_operands = 0;
             cycle_counter_c = 0;
         end
-        if (cycle_counter_s < 9) begin
+        if (cycle_counter_s < 10) begin
             DDR3_Address = C2_WREAD_ADDR_START + (cycle_counter_s * 4);
             DDR3_loaded_weights = 1;
-        end else if (cycle_counter_s < 18) begin
-            DDR3_Address = C2_BREAD_ADDR_START + ((cycle_counter_s - 9) * 4);
+            DDR3_loaded_operands = 0;
+        end else if (cycle_counter_s < 19) begin
+            DDR3_Address = C2_BREAD_ADDR_START + ((cycle_counter_s - 10) * 4);
             DDR3_loaded_biases = 1;
+            DDR3_loaded_operands = 0;
         end
     end
     conv3: begin
-
+        if (cycle_counter_s == 0) begin
+            network_reset = 1;
+            cycle_counter_c = 1;
+        end
+        DDR3_Address = C2_DREAD_ADDR_START + ((cycle_counter_s - 19) * 4);
+        DDR3_loaded_operands = 1;
+        CNN_Stride = 1;
+        CNN_Input_Dim = 224;
+        CNN_Window_Dim = 3;
+        if (network_done == 1) begin
+            state_c = conv4;
+            DDR3_loaded_operands = 0;
+            cycle_counter_c = 0;
+        end
+        if (cycle_counter_s < 10) begin
+            DDR3_Address = C2_WREAD_ADDR_START + (cycle_counter_s * 4);
+            DDR3_loaded_weights = 1;
+            DDR3_loaded_operands = 0;
+        end else if (cycle_counter_s < 19) begin
+            DDR3_Address = C2_BREAD_ADDR_START + ((cycle_counter_s - 10) * 4);
+            DDR3_loaded_biases = 1;
+            DDR3_loaded_operands = 0;
+        end
     end
     conv4: begin
-
+        if (cycle_counter_s == 0) begin
+            network_reset = 1;
+            cycle_counter_c = 1;
+        end
+        DDR3_Address = C2_DREAD_ADDR_START + ((cycle_counter_s - 19) * 4);
+        DDR3_loaded_operands = 1;
+        CNN_Stride = 1;
+        CNN_Input_Dim = 112;
+        CNN_Window_Dim = 3;
+        if (network_done == 1) begin
+            state_c = conv5;
+            DDR3_loaded_operands = 0;
+            cycle_counter_c = 0;
+        end
+        if (cycle_counter_s < 10) begin
+            DDR3_Address = C2_WREAD_ADDR_START + (cycle_counter_s * 4);
+            DDR3_loaded_weights = 1;
+            DDR3_loaded_operands = 0;
+        end else if (cycle_counter_s < 19) begin
+            DDR3_Address = C2_BREAD_ADDR_START + ((cycle_counter_s - 10) * 4);
+            DDR3_loaded_biases = 1;
+            DDR3_loaded_operands = 0;
+        end
     end
     conv5: begin
         DDR3_Address = C2_DREAD_ADDR_START + ((cycle_counter_s - 18) * 4);
@@ -238,7 +309,7 @@ always_comb begin
         end
     end
     conv6: begin
-
+        
     end
     conv7: begin
 
@@ -353,11 +424,12 @@ always_comb begin
         end
     end
     outputResizer:begin
+        //TBD  - Future Works - Should've been softmax but TF doesnt use?
         state_c = idle;
         Layer = 3;
     end
     done: begin
-
+        Proc_Done = 1;
     end
     default: begin
 
